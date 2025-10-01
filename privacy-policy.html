@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongi Guest House | Legal</title>
+    <meta name="description" content="Nestled in the heart of the vibrant city of Harare, Mongi Guest House welcomes
+    guests with a wide array of exceptional amenities designed to create an atmosphere of comfort and tranquility. ">
+    <link rel="icon" type="image/svg+xml" href="/src/logo.png"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link href="./dist/output.css" rel="stylesheet">
+    <link href="./src/swiper-override.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
+    <script src="index.js" defer></script>
+</head>
+<body class="bg-gray-100">
+<!-- Nav Bar -->
+<!-- Navbar -->
+<header class="fixed w-full z-40 bg-white shadow-md">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+        <!-- Logo -->
+        <img src="src/logo.png" width="44" alt="logo">
+        <a href="index.html" class="text-2xl font-bold text-green-800">
+            Mongi Guest House
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex space-x-6 text-green-800 font-medium">
+            <a href="index.html" class="hover:text-green-600">Home</a>
+            <a href="" class="hover:text-green-600" onclick="navigateToAmenities(); return false;">Rooms & Amenities</a>
+            <a href="gallery.html" class="hover:text-green-600">Gallery</a>
+            <a href="contact.html" class="hover:text-green-600">Contact</a>
+            <a href="https://book.nightsbridge.com/37265"
+               class="hover:text-green-600" target="_blank">Book Now</a>
+            <a href="/src/Mongi_food_menu.pdf" class="hover:text-green-600"  target="_blank">Food Menu</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" type="button" class="md:hidden p-2 text-green-800 focus:outline-none z-50">
+            <!-- Hamburger Icon -->
+            <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg"
+                 class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+
+            <!-- Close Icon -->
+            <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg"
+                 class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div id="mobileMenu"
+         class="fixed inset-0 bg-white bg-opacity-95 backdrop-blur-md z-30 flex flex-col
+              items-center justify-center space-y-8 text-2xl font-semibold text-green-800
+              opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+    >
+        <a href="index.html" class="hover:text-green-600" onclick="toggleMenu()">Home</a>
+        <a href="#" class="hover:text-green-600" onclick="handleAmenitiesClick()">Rooms & Amenities</a>
+        <a href="gallery.html" class="hover:text-green-600" onclick="toggleMenu()">Gallery</a>
+        <a href="contact.html" class="hover:text-green-600" onclick="toggleMenu()">Contact</a>
+        <a href="https://book.nightsbridge.com/37265" target="_blank"
+           class="hover:text-green-600" onclick="toggleMenu()">Book Now</a>
+        <a href="/src/Mongi_food_menu.pdf" class="hover:text-green-600"  target="_blank" onclick="toggleMenu()">
+            Food Menu</a>
+    </div>
+</header>
+
+<div class="pt-20">
+<!-- Title -->
+<div class="flex items-center justify-center h-40 px-4 max-w-6xl mx-auto">
+    <h1 class="text-6xl md:text-7xl font-bold text-green-900 text-center">Mongi Guest House</h1>
+</div>
+
+<!-- Heading -->
+<div class="max-w-6xl mx-auto">
+    <h1 class="text-4xl font-semibold text-green-800 px-4">Privacy Policy</h1>
+    <h2 class="text-2xl text-black p-4">Effective Date: August 4, 2025</h2>
+</div>
+<!-- Policy -->
+<div class="px-4 max-w-6xl mx-auto">
+    <span class="text-2xl text-green-800 italic">Table of Contents</span>
+    <!-- Table of Contents -->
+    <ul class="text-black">
+        <li>1. Information We Collect</li>
+        <li>2. How We Use Your Information</li>
+        <li>3. Sharing of Information</li>
+        <li>4. Data Storage and Security</li>
+        <li>5. Your Rights and Choices</li>
+        <li>6. Third-Party Links and Services</li>
+        <li>7. Changes to This Policy</li>
+        <li>8. Contact Us</li>
+    </ul>
+
+    <!-- 1 -->
+    <div class="mt-12 max-w-6xl mx-auto">
+        <span class="text-2xl text-green-800 italic">1. Information We Collect</span>
+    </div>
+    <div class="mt-4 text-black">
+        <p class="">
+            We may collect the following types of personal and usage information:
+        </p>
+        <ul class="text-black px-4">
+            <li>a. <span class="font-bold">Personal Information</span></li>
+            <li class="px-6">
+                <ul class="">
+                    <li>• Name</li>
+                    <li>• Email address</li>
+                    <li>• Phone number</li>
+                    <li>• Date of birth</li>
+                    <li>• Payment details (only for transactions)</li>
+                    <li>• Booking information</li>
+                </ul>
+            </li>
+            <li class="mt-4">b. <span class="font-bold">Usage Data</span></li>
+            <li class="px-6">
+                <ul class="mt-2">
+                    <li>• Device information (e.g., model, OS version)</li>
+                    <li>• IP address</li>
+                    <li>• App interactions and preferences</li>
+                    <li>• Location data (if permission is granted)</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 2 -->
+    <div class="mt-12 max-w-6xl mx-auto">
+        <span class="text-2xl text-green-800 italic">2. How We Use Your Information</span>
+    </div>
+    <div class="mt-4 text-black">
+        <p class="">
+            We may collect the following types of personal and usage information:
+        </p>
+        <ul class="text-black px-4">
+            <li>• Manage hotel bookings and reservations</li>
+            <li>• Provide food ordering and delivery services</li>
+            <li>• Enable payments and transaction history</li>
+            <li>• Offer customer support</li>
+            <li>• Send important updates and notifications</li>
+            <li>• Improve app functionality and user experience</li>
+            <li>• Track rewards and loyalty points</li>
+        </ul>
+    </div>
+
+    <!-- 3 -->
+    <div class="mt-12 max-w-6xl mx-auto">
+        <span class="text-2xl text-green-800 italic">3. Sharing of Information</span>
+    </div>
+    <div class="mt-4 text-black">
+        <p class="">
+            We do not sell or rent your personal information. However, we may share data with:
+        </p>
+        <ul class="text-black px-4">
+            <li>• Service providers (e.g., payment processors, analytics tools)</li>
+            <li>• Law enforcement or government agencies if required by law</li>
+            <li>• Affiliated partners (only with your consent, where applicable)</li>
+        </ul>
+    </div>
+
+    <!-- 4 -->
+    <div class="mt-12 max-w-6xl mx-auto">
+        <span class="text-2xl text-green-800 italic">4. Data Storage and Security</span>
+    </div>
+    <div class="mt-4 text-black">
+        <p class="">
+            We take appropriate security measures to protect your data, including:
+        </p>
+        <ul class="text-black px-4">
+            <li>• SSL encryption for data in transit</li>
+            <li>• Secure servers and firewalls</li>
+            <li>• Regular security audits</li>
+        </ul>
+        <p>
+            Your data is stored for as long as necessary to fulfill the purposes outlined in this policy or as
+            required by law.
+        </p>
+    </div>
+
+    <!-- 5 -->
+    <div class="mt-12 max-w-6xl mx-auto">
+        <span class="text-2xl text-green-800 italic">5. Your Rights and Choices</span>
+    </div>
+    <div class="mt-4 text-black">
+        <p class="">
+            You have the right to:
+        </p>
+        <ul class="text-black px-4">
+            <li>• Access the personal data we hold about you</li>
+            <li>• Request correction or deletion of your data</li>
+            <li>• Withdraw consent at any time (where applicable)</li>
+            <li>• Opt out of promotional communications</li>
+        </ul>
+        <p>
+            To exercise these rights, contact us at
+            <span class="text-green-800 font-medium">mongilodge@gmail.com.</span>
+        </p>
+    </div>
+
+    <!-- 6 -->
+    <div class="mt-12 max-w-6xl mx-auto">
+        <span class="text-2xl text-green-800 italic">6. Third-Party Links and Services</span>
+    </div>
+    <div class="mt-4 text-black">
+        <p class="">
+            The App may contain links to external sites or services. We are not responsible for the privacy practices
+            of those third parties. We encourage you to read their privacy policies.
+        </p>
+    </div>
+
+    <!-- 7 -->
+    <div class="mt-12 max-w-6xl mx-auto">
+        <span class="text-2xl text-green-800 italic">7. Changes to This Policy</span>
+    </div>
+    <div class="mt-4 text-black">
+        <p class="">
+            We may update this Privacy Policy from time to time. If we make material changes, we will notify you
+            through the App or by email.
+        </p>
+    </div>
+
+    <!-- 8 -->
+    <div class="mt-12 max-w-6xl mx-auto">
+        <span class="text-2xl text-green-800 italic">8. Contact Us</span>
+    </div>
+    <div class="mt-4 text-black">
+        <p class="">
+            If you have any questions or concerns about this Privacy Policy, please contact us at:
+        </p>
+    </div>
+    <div class="mx-auto max-w-6xl font-bold text-black mt-4">
+        <p class="flex gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="lucide lucide-mail-icon lucide-mail text-blue-800">
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+            </svg>
+            <span class="text-green-800">info@mongilodge.com</span>
+        </p>
+        <p class="flex gap-4 mt-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="lucide lucide-map-pin-icon lucide-map-pin">
+        <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span class="text-green-800">Mongi Guest House</span>
+        </p>
+        <p class="flex gap-4"><span></span><span class="px-6">17 Airdrie Road</span></p>
+        <p class="flex gap-4"><span></span><span class="px-6">Eastlea</span></p>
+        <p class="flex gap-4"><span></span><span class="px-6">Harare, Zimbabwe</span></p>
+    </div>
+</div>
+
+<div class="h-20"></div>
+<!-- Footer -->
+<footer class="bg-green-900 h-140 sm:h-100">
+    <div class="max-w-7xl grid grid-cols-2 md:grid-cols-4 mx-auto items-start justify-between p-6">
+        <!-- Address -->
+        <div class="text-center text-white">
+            <h1 class="text-3xl font-medium underline decoration-2">Address</h1>
+            <p class="font-light">17 Airdrie Road</p>
+            <p class="font-light">Eastlea, Harare</p>
+            <p class="font-light">Zimbabwe</p>
+        </div>
+        <!-- Contact -->
+        <div class="text-center text-white">
+            <h1 class="text-3xl font-medium underline decoration-2">Contact</h1>
+            <p class="font-light">stay@mongilodge.com</p>
+            <p class="font-light">Call/Sms/WA +263783106946</p>
+            <p class="font-light">Call +263 71 160 8259</p>
+            <p class="font-light">Landline +263 24 249 6297</p>
+        </div>
+        <!-- Follow -->
+        <div class="text-center text-white">
+            <h1 class="text-3xl font-medium underline decoration-2">Follow</h1>
+            <a
+                    class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                    href="https://www.facebook.com/people/Mongi-Guest-House/61566407660600/?mibextid=LQQJ4d"
+                    target="_blank"
+            >
+                Facebook
+            </a>
+        </div>
+        <!-- Legal -->
+        <div class="text-center text-white">
+            <h1 class="text-3xl font-medium underline decoration-2">Legal</h1>
+            <a
+                    class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                    href="privacy-policy.html"
+            >
+                Privacy Policy
+            </a>
+        </div>
+    </div>
+    <h1 class="text-center mx-auto max-w-6xl text-6xl text-white mt-10">Mongi Guest House</h1>
+    <p class="text-center mx-auto mt-4 max-w-6xl text-xl text-white">
+        &copy; <span id="year"></span> Mongi Guest House LLC.
+    </p>
+
+</footer>
+</div>
+</body>
+</html>

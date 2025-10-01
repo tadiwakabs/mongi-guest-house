@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongi Guest House | Contact</title>
+    <meta name="description" content="Nestled in the heart of the vibrant city of Harare, Mongi Guest House welcomes
+    guests with a wide array of exceptional amenities designed to create an atmosphere of comfort and tranquility. ">
+    <link rel="icon" type="image/svg+xml" href="/src/logo.png"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link href="./dist/output.css" rel="stylesheet">
+    <link href="./src/swiper-override.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
+    <script src="index.js" defer></script>
+</head>
+<body class="bg-gray-100">
+<!-- Navbar -->
+<header class="fixed w-full z-40 bg-white shadow-md">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+        <!-- Logo -->
+        <img src="src/logo.png" width="44" alt="logo">
+        <a href="index.html" class="text-2xl font-bold text-green-800">
+            Mongi Guest House
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex space-x-6 text-green-800 font-medium">
+            <a href="index.html" class="hover:text-green-600">Home</a>
+            <a href="" class="hover:text-green-600" onclick="navigateToAmenities(); return false;">Rooms & Amenities</a>
+            <a href="gallery.html" class="hover:text-green-600">Gallery</a>
+            <a href="contact.html" class="hover:text-green-600">Contact</a>
+            <a href="https://book.nightsbridge.com/37265"
+               class="hover:text-green-600" target="_blank">Book Now</a>
+            <a href="/src/Mongi_food_menu.pdf" class="hover:text-green-600"  target="_blank">Food Menu</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" type="button" class="md:hidden p-2 text-green-800 focus:outline-none z-50">
+            <!-- Hamburger Icon -->
+            <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg"
+                 class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+
+            <!-- Close Icon -->
+            <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg"
+                 class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div id="mobileMenu"
+         class="fixed inset-0 bg-white bg-opacity-95 backdrop-blur-md z-30 flex flex-col
+              items-center justify-center space-y-8 text-2xl font-semibold text-green-800
+              opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+    >
+        <a href="index.html" class="hover:text-green-600" onclick="toggleMenu()">Home</a>
+        <a href="#" class="hover:text-green-600" onclick="handleAmenitiesClick()">Rooms & Amenities</a>
+        <a href="gallery.html" class="hover:text-green-600" onclick="toggleMenu()">Gallery</a>
+        <a href="contact.html" class="hover:text-green-600" onclick="toggleMenu()">Contact</a>
+        <a href="https://book.nightsbridge.com/37265" target="_blank"
+           class="hover:text-green-600" onclick="toggleMenu()">Book Now</a>
+        <a href="/src/Mongi_food_menu.pdf" class="hover:text-green-600"  target="_blank" onclick="toggleMenu()">
+            Food Menu</a>
+    </div>
+</header>
+
+<div class="pt-20">
+<!-- Title -->
+<div class="flex items-center justify-center h-40 px-4 max-w-6xl mx-auto">
+    <h1 class="text-6xl md:text-7xl font-bold text-green-900 text-center">Mongi Guest House</h1>
+</div>
+<div class="flex items-center justify-center h-20 px-4 max-w-6xl mx-auto">
+    <h2 class="text-2xl font-semibold text-green-800 text-center">Your gateway to an
+        unforgettable experience.</h2>
+</div>
+
+
+<!-- Heading -->
+<div class="max-w-6xl mx-auto flex items-center justify-center mt-4 sm:mt-0">
+    <h1 class="text-4xl font-semibold text-green-800 px-4">Contact Us</h1>
+</div>
+
+<!-- Contact Form -->
+<div class="px-4 max-w-6xl mx-auto mt-12 flex items-center justify-center">
+    <form action="https://formsubmit.co/tadiwa@oakvilletx.com" method="POST" class="text-green-800 font-medium">
+
+        <!-- Anti-spam & redirect -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="contact.html">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4">
+            <div>
+                <!-- First Name -->
+                <p class="px-4"> First Name</p>
+                <label for="firstName">
+                    <input type="text" id="firstName" name="First Name" placeholder="First Name"
+                           class="border border-green-800 mt-4 px-4 py-2 w-full"
+                           minlength="2">
+                </label>
+
+                <!-- First Name -->
+                <p class="mt-8 px-4"> Last Name</p>
+                <label for="lastName">
+                    <input type="text" id="lastName" name="Last Name" placeholder="Last Name"
+                           class="border border-green-800 mt-4 px-4 py-2 w-full"
+                           minlength="2">
+                </label>
+            </div>
+
+            <div>
+                <!-- Email -->
+                <p class="px-4"> Email <span class="text-red-700">*</span></p>
+                <label for="email">
+                    <input type="email" id="email" name="Email" placeholder="Email"
+                           class="border border-green-800 mt-4 px-4 py-2 w-full"
+                           required>
+                </label>
+
+                <!-- Phone -->
+                <p class="mt-8 px-4"> Phone</p>
+                <label for="phone">
+                    <input type="text" id="phone" name="Phone" placeholder="Phone"
+                           class="border border-green-800 mt-4 px-4 py-2 w-full">
+                </label>
+            </div>
+        </div>
+
+        <p class="px-4 mt-8"> Message <span class="text-red-700">*</span></p>
+        <label for="message">
+        <textarea id="message" name="Message" placeholder="Message"
+                  class="w-full h-40 px-4 py-3 mt-4 border border-green-800"
+                  required></textarea>
+        </label>
+
+        <div class="flex items-center justify-center p-4">
+            <button type="submit"
+                    class="border border-black rounded-full bg-green-800 text-white font-medium px-12 py-2
+                       hover:bg-white hover:text-green-800 transition-colors duration-300 ease-in-out">
+                Submit
+            </button>
+        </div>
+    </form>
+
+
+</div>
+
+<div class="h-20"></div>
+<!-- Footer -->
+<footer class="bg-green-900 h-140 sm:h-100">
+    <div class="max-w-7xl grid grid-cols-2 md:grid-cols-4 mx-auto items-start justify-between p-6">
+        <!-- Address -->
+        <div class="text-center text-white">
+            <h1 class="text-3xl font-medium underline decoration-2">Address</h1>
+            <p class="font-light">17 Airdrie Road</p>
+            <p class="font-light">Eastlea, Harare</p>
+            <p class="font-light">Zimbabwe</p>
+        </div>
+        <!-- Contact -->
+        <div class="text-center text-white">
+            <h1 class="text-3xl font-medium underline decoration-2">Contact</h1>
+            <p class="font-light">stay@mongilodge.com</p>
+            <p class="font-light">Call/Sms/WA +263783106946</p>
+            <p class="font-light">Call +263 71 160 8259</p>
+            <p class="font-light">Landline +263 24 249 6297</p>
+        </div>
+        <!-- Follow -->
+        <div class="text-center text-white">
+            <h1 class="text-3xl font-medium underline decoration-2">Follow</h1>
+            <a
+                    class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                    href="https://www.facebook.com/people/Mongi-Guest-House/61566407660600/?mibextid=LQQJ4d"
+                    target="_blank"
+            >
+                Facebook
+            </a>
+        </div>
+        <!-- Legal -->
+        <div class="text-center text-white">
+            <h1 class="text-3xl font-medium underline decoration-2">Legal</h1>
+            <a
+                    class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                    href="privacy-policy.html"
+            >
+                Privacy Policy
+            </a>
+        </div>
+    </div>
+    <h1 class="text-center mx-auto max-w-6xl text-6xl text-white mt-10">Mongi Guest House</h1>
+    <p class="text-center mx-auto mt-4 max-w-6xl text-xl text-white">
+        &copy; <span id="year"></span> Mongi Guest House LLC.
+    </p>
+
+</footer>
+</div>
+</body>
+</html>
