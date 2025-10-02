@@ -17,20 +17,23 @@
     <header class="fixed w-full z-40 bg-white shadow-md">
         <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
             <!-- Logo -->
-            <img src="src/logo.png" width="44" alt="logo">
-            <a href="index.html" class="text-2xl font-bold text-green-800">
-                Mongi Guest House
-            </a>
+            <div class="flex items-center space-x-4">
+                <img src="src/logo.png" width="44" alt="logo">
+                <a href="index.html" class="text-2xl font-bold text-green-800">
+                    Mongi Guest House
+                </a>
+            </div>
 
             <!-- Desktop Nav -->
-            <div class="hidden md:flex space-x-6 text-green-800 font-medium">
-                <a href="index.html" class="hover:text-green-600">Home</a>
-                <a href="" class="hover:text-green-600" onclick="navigateToAmenities(); return false;">Rooms & Amenities</a>
-                <a href="gallery.html" class="hover:text-green-600">Gallery</a>
-                <a href="contact.html" class="hover:text-green-600">Contact</a>
+            <div class="hidden md:flex space-x-6 text-green-800 font-medium text-sm lg:text-lg">
+                <a href="index.html" class="hover:text-green-600 text-center">Home</a>
+                <a href="" class="hover:text-green-600 text-center"
+                   onclick="navigateToAmenities(); return false;">Rooms & Amenities</a>
+                <a href="gallery.html" class="hover:text-green-600 text-center">Gallery</a>
+                <a href="contact.html" class="hover:text-green-600 text-center">Contact</a>
                 <a href="https://book.nightsbridge.com/37265"
-                   class="hover:text-green-600" target="_blank">Book Now</a>
-                <a href="/src/Mongi_food_menu.pdf" class="hover:text-green-600"  target="_blank">Food Menu</a>
+                   class="hover:text-green-600 text-center" target="_blank">Book Now</a>
+                <a href="src/Mongi_food_menu.pdf" class="hover:text-green-600 text-center"  target="_blank">Food Menu</a>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -64,7 +67,7 @@
             <a href="contact.html" class="hover:text-green-600" onclick="toggleMenu()">Contact</a>
             <a href="https://book.nightsbridge.com/37265" target="_blank"
                class="hover:text-green-600" onclick="toggleMenu()">Book Now</a>
-            <a href="/src/Mongi_food_menu.pdf" class="hover:text-green-600"  target="_blank" onclick="toggleMenu()">
+            <a href="src/Mongi_food_menu.pdf" class="hover:text-green-600"  target="_blank" onclick="toggleMenu()">
                 Food Menu</a>
         </div>
     </header>

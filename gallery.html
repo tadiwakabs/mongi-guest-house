@@ -18,20 +18,24 @@
 <header class="fixed w-full z-40 bg-white shadow-md">
     <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
         <!-- Logo -->
-        <img src="src/logo.png" width="44" alt="logo">
-        <a href="index.html" class="text-2xl font-bold text-green-800">
-            Mongi Guest House
-        </a>
+        <div class="flex items-center space-x-4">
+            <img src="src/logo.png" width="44" alt="logo">
+            <a href="index.html" class="text-2xl font-bold text-green-800">
+                Mongi Guest House
+            </a>
+        </div>
 
         <!-- Desktop Nav -->
-        <div class="hidden md:flex space-x-6 text-green-800 font-medium">
-            <a href="index.html" class="hover:text-green-600">Home</a>
-            <a href="" class="hover:text-green-600" onclick="navigateToAmenities(); return false;">Rooms & Amenities</a>
-            <a href="gallery.html" class="hover:text-green-600">Gallery</a>
-            <a href="contact.html" class="hover:text-green-600">Contact</a>
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex space-x-6 text-green-800 font-medium text-sm lg:text-lg">
+            <a href="index.html" class="hover:text-green-600 text-center">Home</a>
+            <a href="" class="hover:text-green-600 text-center"
+               onclick="navigateToAmenities(); return false;">Rooms & Amenities</a>
+            <a href="gallery.html" class="hover:text-green-600 text-center">Gallery</a>
+            <a href="contact.html" class="hover:text-green-600 text-center">Contact</a>
             <a href="https://book.nightsbridge.com/37265"
-               class="hover:text-green-600" target="_blank">Book Now</a>
-            <a href="/src/Mongi_food_menu.pdf" class="hover:text-green-600"  target="_blank">Food Menu</a>
+               class="hover:text-green-600 text-center" target="_blank">Book Now</a>
+            <a href="src/Mongi_food_menu.pdf" class="hover:text-green-600 text-center"  target="_blank">Food Menu</a>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -73,13 +77,13 @@
 <div class="pt-20">
 <!-- Title -->
 <div class="flex items-center justify-center h-40 px-4 max-w-6xl mx-auto">
-    <h1 class="text-7xl font-bold text-green-900">The Mongi Experience</h1>
+    <h1 class="text-5xl md:text-7xl font-bold text-green-900 text-center">The Mongi Experience</h1>
 </div>
 
 
 <!-- Heading -->
 <div class="max-w-6xl mx-auto flex items-center justify-center">
-    <h1 class="text-4xl font-semibold text-green-800 px-4 mt-8 sm:mt-4">Photo Gallery</h1>
+    <h1 class="text-4xl font-semibold text-green-800 px-4 mt-4">Photo Gallery</h1>
 </div>
 <div class="max-w-6xl mx-auto flex items-center justify-center">
     <p class="text-2xl font-medium text-green-800 px-4 mt-4 text-center">Check out our Guest House in detail!</p>
@@ -601,7 +605,7 @@
         >
             <span class="text-3xl">Exterior</span>
             <!-- Arrow icon -->
-            <svg id="arrowIconJunior" class="w-5 h-5 transform transition-transform duration-300 rotate-180"
+            <svg id="arrowIconExterior" class="w-5 h-5 transform transition-transform duration-300 rotate-180"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M19 9l-7 7-7-7" />
