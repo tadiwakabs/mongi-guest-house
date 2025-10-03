@@ -4,8 +4,8 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mongi Guest House</title>
     <meta name="description" content="Nestled in the heart of the vibrant city of Harare, Mongi Guest House welcomes
-    guests with a wide array of exceptional amenities designed to create an atmosphere of comfort and tranquility. ">
-    <link rel="icon" type="image/svg+xml" href="/src/logo.png"/>
+    guests with a wide array of exceptional amenities designed to create an atmosphere of comfort and tranquility.">
+    <link rel="icon" type="image/svg+xml" href="src/logo.png"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link href="./dist/output.css" rel="stylesheet">
     <link href="./src/swiper-override.css" rel="stylesheet">
@@ -932,8 +932,8 @@
     </section>
 
     <!-- Location -->
-    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 p-6 max-w-6xl mx-auto">
-        <div>
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 p-6 max-w-6xl mx-auto gap-4">
+        <div class="">
             <h1 class="text-4xl text-green-800 font-semibold text-center">Convenient Location</h1>
             <p class="mt-10 text-xl text-green-800">
                 Mongi Guest House is located in the heart of Harare, just 8 minutes away from CBD, 18 minutes from
@@ -942,13 +942,29 @@
                 Mukuvisi Woodlands.
             </p>
         </div>
-        <div class="transform hover:scale-102 transition-transform duration-300">
+        <div class="flex flex-col items-center justify-center gap-2">
+            <div class="transform hover:scale-102 transition-transform duration-300 flex items-center justify-center">
+                <a
+                    href="https://www.google.com/maps/place/Mongi+Guest+House/@-17.8342272,31.0311847,13z/data=!4m9!3m8!1s0x1931bb396a739083:0x48e93fb7e998c39c!5m2!4m1!1i2!8m2!3d-17.8312273!4d31.0954863!16s%2Fg%2F11ltsd091j?entry=ttu&g_ep=EgoyMDI1MDkyMy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    class="relative group block"
+                >
+                    <img src="src/location.png" alt="location" class="border border-green-900 w-120">
+                    <div
+                        class="absolute inset-0 bg-black flex items-center justify-center opacity-0
+                        group-hover:opacity-70 transition-opacity duration-300"
+                    >
+                        <span class="pt-4 text-white text-xl font-semibold opacity-100">Open in Google Maps</span>
+                    </div>
+                </a>
+            </div>
             <a
-                href="https://www.google.com/maps/place/Mongi+Guest+House/@-17.8342272,31.0311847,13z/data=!4m9!3m8!1s0x1931bb396a739083:0x48e93fb7e998c39c!5m2!4m1!1i2!8m2!3d-17.8312273!4d31.0954863!16s%2Fg%2F11ltsd091j?entry=ttu&g_ep=EgoyMDI1MDkyMy4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank"
-                class=""
+                    href="gallery.html"
+                    class="md:hidden text-white text-xl bg-green-800 px-4 py-2 rounded-md mt-4 h-12
+                         w-auto hover:bg-green-100 hover:text-green-600 font-medium transition-colors
+                         duration-300 ease-in-out items-center"
             >
-                <img src="src/location.png" alt="location" class="border border-green-900">
+                Open in Google Maps
             </a>
         </div>
     </div>
@@ -984,8 +1000,8 @@
     <div class="flex items-center justify-center p-4 max-w-6xl mx-auto">
         <a
                 href="gallery.html"
-                class="text-white text-2xl bg-green-800 px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-md py-3 mt-4 h-14
-                         w-auto hover:bg-green-100 rounded-full hover:text-green-600 font-medium transition-colors
+                class="text-white text-2xl bg-green-800 px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-md mt-4 h-14
+                         w-auto hover:bg-green-100 hover:text-green-600 font-medium transition-colors
                          duration-300 ease-in-out items-center"
         >
             View Gallery
