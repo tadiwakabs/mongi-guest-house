@@ -6,10 +6,7 @@
     <meta name="description" content="Nestled in the heart of the vibrant city of Harare, Mongi Guest House welcomes
     guests with a wide array of exceptional amenities designed to create an atmosphere of comfort and tranquility. ">
     <link rel="icon" type="image/svg+xml" href="src/logo.png"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link href="./dist/output.css" rel="stylesheet">
-    <link href="./src/swiper-override.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
     <script src="index.js" defer></script>
     <script src="contact.js" defer></script>
 </head>
@@ -75,12 +72,11 @@
 
 <div class="pt-20">
 <!-- Title -->
-<div class="flex items-center justify-center h-30 sm:h-40 px-4 max-w-6xl mx-auto">
+<div class="flex items-center justify-center h-24 sm:h-34 px-4 max-w-6xl mx-auto">
     <h1 class="text-4xl md:text-7xl font-bold text-green-900 text-center">Mongi Guest House</h1>
 </div>
 <div class="flex items-center justify-center h-20 px-4 max-w-6xl mx-auto">
-    <h2 class="text-2xl font-semibold text-green-800 text-center">Your gateway to an
-        unforgettable experience.</h2>
+    <h2 class="text-2xl font-semibold text-green-800 text-center">Your gateway to an unforgettable experience.</h2>
 </div>
 
 
@@ -89,73 +85,161 @@
     <h1 class="text-4xl font-semibold text-green-800 px-4">Contact Us</h1>
 </div>
 
-<!-- Contact Form -->
-<p class="flex justify-center text-sm font-medium mt-8 mr-36 md:mr-96 text-red-700">*
-        <span class="text-green-800 ">&nbsp;Required</span></p>
-<div class="px-4 max-w-6xl mx-auto mt-2 flex items-center justify-center">
-    <form action="https://formsubmit.co/a0fe00e10a74de9aa37c1e406b7e7598"
-          method="POST"
-          class="text-green-800 font-medium"
-          id="contactForm">
-
-        <!-- Anti-spam -->
-        <input type="hidden" name="_captcha" value="false">
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4">
-            <div>
-                <!-- First Name -->
-                <p class="px-4"> First Name</p>
-                <label for="firstName">
-                    <input type="text" id="firstName" name="First Name" placeholder="First Name"
-                           class="border border-green-800 mt-4 px-4 py-2 w-full text-black"
-                           minlength="2">
-                </label>
-
-                <!-- Last Name -->
-                <p class="mt-8 px-4"> Last Name</p>
-                <label for="lastName">
-                    <input type="text" id="lastName" name="Last Name" placeholder="Last Name"
-                           class="border border-green-800 mt-4 px-4 py-2 w-full text-black"
-                           minlength="2">
-                </label>
+<!-- Contact Form + Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <!-- Cards -->
+        <div class="flex flex-col justify-center space-y-8 max-md:mt-6">
+            <!-- WhatsApp Card -->
+            <div class="card card-hover w-auto h-24 md:h-32 mx-12 flex flex-wrap justify-center items-center gap-2
+            md:gap-4 px-2 md:px-6">
+                <img class="w-10" src="src/images/whatsapp.svg" alt="WhatsApp Logo">
+                <span class="font-medium md:text-xl text-green-800">WhatsApp </span>
+                <span class="font-medium md:text-xl text-green-800">+263 78 310 6946 </span>
             </div>
-
-            <div>
-                <!-- Email -->
-                <p class="px-4"> Email <span class="text-red-700">*</span></p>
-                <label for="email">
-                    <input type="email" id="email" name="Email" placeholder="Email"
-                           class="border border-green-800 mt-4 px-4 py-2 w-full text-black"
-                           required>
-                </label>
-
-                <!-- Phone -->
-                <p class="mt-8 px-4"> Phone</p>
-                <label for="phone">
-                    <input type="text" id="phone" name="Phone" placeholder="Phone"
-                           class="border border-green-800 mt-4 px-4 py-2 w-full text-black">
-                </label>
+            <!-- Phone Card -->
+            <div class="card card-hover w-auto h-24 md:h-32 mx-12 flex flex-wrap items-center justify-center
+            max-md:gap-2 max-md:px-2 md:space-x-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-phone-icon lucide-phone text-green-800 md:mr-12">"
+                    >
+                    <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0
+                    1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292
+                    1.233 14 14 0 0 0 6.392 6.384"
+                    />
+                </svg>
+                <div class="flex flex-col space-y-1">
+                    <div class="space-x-6 text-center max-md:ml-2">
+                        <span class="font-medium md:text-xl text-green-800">Phone </span>
+                        <span class="font-medium md:text-xl text-green-800">+263 78 310 6946 </span>
+                    </div>
+                    <div class="max-md:ml-2">
+                        <span class="font-medium md:text-xl text-green-800 pr-4">Landline </span>
+                        <span class="font-medium md:text-xl text-green-800 pr-2">+263 24 249 6297 </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Email Card -->
+            <div class="card card-hover w-auto h-24 md:h-32 mx-12 flex flex-wrap items-center justify-center gap-2
+            md:gap-4 px-2 md:px-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-mail-icon lucide-mail text-green-800">
+                >
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                </svg>
+                <span class="font-medium md:text-xl text-green-800">Email </span>
+                <a href="mailto:stay@mongilodge.com" class="font-medium md:text-xl text-green-800">stay@mongilodge.com </a>
             </div>
         </div>
 
-        <p class="px-4 mt-8"> Message <span class="text-red-700">*</span></p>
-        <label for="message">
-        <textarea id="message" name="Message" placeholder="Message"
-                  class="w-full h-40 px-4 py-3 mt-4 border border-green-800 text-black"
-                  required></textarea>
-        </label>
+        <!-- Form -->
+        <div>
+            <p class="md:hidden text-2xl text-green-800 font-medium text-center"> Contact Form</p>
+            <p class="flex justify-center text-sm font-medium mt-8 mr-36 md:mr-86 text-red-700 mb-2">*
+                <span class="text-green-800 ">&nbsp;Required</span></p>
+            <div class="card p-2 mx-8">
+                <div class="px-4 max-w-6xl mx-auto mt-2 flex items-center justify-center">
+                    <form action="https://formsubmit.co/a0fe00e10a74de9aa37c1e406b7e7598"
+                          method="POST"
+                          class="text-green-800 font-medium"
+                          id="contactForm">
 
-        <div class="flex items-center justify-center p-4">
-            <button type="submit"
-                    class="border border-black rounded-full bg-green-800 text-white font-medium px-12 py-2
-                       hover:bg-white hover:text-green-800 transition-colors duration-300 ease-in-out">
-                Submit
-            </button>
+                        <!-- Anti-spam -->
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4">
+                            <div>
+                                <!-- First Name -->
+                                <p class="px-4"> First Name</p>
+                                <label for="firstName">
+                                    <input type="text" id="firstName" name="First Name" placeholder="First Name"
+                                           class="border border-green-800 mt-4 px-4 py-2 w-full text-black"
+                                           minlength="2">
+                                </label>
+                            </div>
+                            <div>
+                                <!-- Last Name -->
+                                <p class="px-4"> Last Name</p>
+                                <label for="lastName">
+                                    <input type="text" id="lastName" name="Last Name" placeholder="Last Name"
+                                           class="border border-green-800 mt-4 px-4 py-2 w-full text-black"
+                                           minlength="2">
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <!-- Email -->
+                            <p class="px-4"> Email <span class="text-red-700">*</span></p>
+                            <label for="email">
+                                <input type="email" id="email" name="Email" placeholder="Email"
+                                       class="border border-green-800 mt-4 px-4 py-2 w-full text-black"
+                                       required>
+                            </label>
+                        </div>
+                        <div class="relative w-full mt-4">
+                            <!-- Phone -->
+                            <p class="px-4">Phone</p>
+                            <div class="flex items-center border border-green-800 mt-4">
+                                <!-- Country selector -->
+                                <div id="countrySelector"
+                                     class="flex items-center justify-between px-3 py-2 bg-gray-50 cursor-pointer w-28
+                                     text-green-800 relative border-r border-r-green-800 bg-gray-300">
+                                    <span id="selectedFlag">
+                                        <img src="https://flagcdn.com/24x18/zw.png" alt="Zimbabwe" class="w-8 h-4">
+                                    </span>
+                                    <span id="selectedCode">+263</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                         class="w-4 h-4 ml-2 text-green-800" fill="none"
+                                         viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+
+                                <!-- Phone input -->
+                                <input type="text" id="phone" name="Phone"
+                                       placeholder="Phone"
+                                       class="w-full px-4 py-2 focus:outline-none text-black" />
+                            </div>
+
+                            <!-- Dropdown -->
+                            <div id="dropdown"
+                                 class="absolute left-0 right-0 bg-white border border-green-800 shadow-lg mt-1 max-h-64
+                                  overflow-y-auto hidden z-50 scroll:">
+                                <input id="searchCountry" type="text"
+                                       placeholder="Search country..."
+                                       class="w-full px-3 py-2 border-b border-green-800 outline-none text-sm text-green-800">
+                                <div id="countryList"></div>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="mt-4">
+                            <p class="px-4"> Message <span class="text-red-700">*</span></p>
+                            <label for="message">
+                                <textarea id="message" name="Message" placeholder="Message"
+                                          class="w-full h-40 px-4 py-3 mt-4 border border-green-800 text-black"
+                                          required></textarea>
+                            </label>
+                        </div>
+
+                        <div class="flex items-center justify-center p-4">
+                            <button type="submit"
+                                    class="border border-black rounded-full bg-green-800 text-white font-medium px-12 py-2
+                           hover:bg-white hover:text-green-800 transition-colors duration-300 ease-in-out">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
         </div>
-    </form>
-
-
-</div>
+    </div>
 
 
 <!-- Form Submission Confirmation Popup -->
@@ -180,9 +264,11 @@
         <!-- Address -->
         <div class="text-center text-white">
             <h1 class="text-3xl font-medium underline decoration-2">Address</h1>
-            <p class="font-light">17 Airdrie Road</p>
-            <p class="font-light">Eastlea, Harare</p>
-            <p class="font-light">Zimbabwe</p>
+            <div class="flex flex-col items-center">
+                <p class="font-light text-xl">17 Airdrie Road</p>
+                <p class="font-light text-xl">Eastlea, Harare</p>
+                <p class="font-light text-xl">Zimbabwe</p>
+            </div>
         </div>
         <!-- Contact -->
         <div class="text-center text-white">
@@ -195,13 +281,30 @@
         <!-- Follow -->
         <div class="text-center text-white">
             <h1 class="text-3xl font-medium underline decoration-2">Follow</h1>
-            <a
-                    class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
-                    href="https://www.facebook.com/people/Mongi-Guest-House/61566407660600/?mibextid=LQQJ4d"
-                    target="_blank"
-            >
-                Facebook
-            </a>
+            <div class="flex flex-col items-center">
+                <a
+                        class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                        href="https://www.facebook.com/people/Mongi-Guest-House/61566407660600/?mibextid=LQQJ4d"
+                        target="_blank"
+                >
+                    Facebook
+                </a>
+                <a
+                        class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                        href="https://www.instagram.com/mongilodge?igsh=YXltY3BnMnF3aHh6&utm_source=qr"
+                        target="_blank"
+                >
+                    Instagram
+                </a>
+                <a
+                        class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                        href="https://www.tiktok.com/@mongilodge?_t=ZT-90KreGMDE1W&_r=1"
+                        target="_blank"
+                >
+                    TikTok
+                </a>
+            </div>
+
         </div>
         <!-- Legal -->
         <div class="text-center text-white">

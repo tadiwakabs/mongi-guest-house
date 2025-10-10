@@ -6,10 +6,7 @@
     <meta name="description" content="Nestled in the heart of the vibrant city of Harare, Mongi Guest House welcomes
     guests with a wide array of exceptional amenities designed to create an atmosphere of comfort and tranquility.">
     <link rel="icon" type="image/svg+xml" href="src/logo.png"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link href="./dist/output.css" rel="stylesheet">
-    <link href="./src/swiper-override.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
     <script src="index.js" defer></script>
 </head>
 <body class="bg-gray-100">
@@ -78,8 +75,13 @@
         <h1 class="text-4xl md:text-7xl font-bold text-green-900">Mongi Guest House</h1>
     </div>
 
+    <!-- Headline -->
+    <div class="flex items-center justify-center text-center px-4 max-w-6xl mx-auto">
+        <h1 class="text-2xl md:text-4xl font-bold text-green-900">Your Peaceful Stay in the Heart of Harare</h1>
+    </div>
+
     <!-- Registration / Payment Buttons -->
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 px-8 sm:px-2">
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 my-6 px-8 sm:px-2">
         <a
                 class="flex items-center justify-center text-white text-xl sm:text-2xl bg-green-800
                                    px-8 py-3 mt-4 rounded-md w-full sm:w-auto
@@ -129,20 +131,32 @@
 
     <!-- Description -->
     <div class="grid grid-cols-1 sm:grid-cols-2 max-w-6xl mx-auto px-4 mt-8 gap-6">
-        <p class="text-2xl text-green-800">
-            Nestled in the heart of the vibrant city of Harare, Mongi Guest House welcomes guests with a wide array of
-            exceptional amenities designed to create an atmosphere of comfort and tranquility. With a blend of modern
-            conveniences and thoughtful touches, Mongi ensures a memorable stay for all who visit, providing an ideal
-            retreat from the bustle of city life.
+        <p class="text-xl md:text-2xl text-green-800">
+            Welcome to Mongi Guest House, where modern comfort meets timeless tranquility. Nestled in the vibrant heart
+            of Harare, our boutique guest house offers a serene escape from the city’s pace while keeping you close to
+            its best attractions. Enjoy thoughtfully designed rooms, elegant amenities, and the warmth of authentic
+            Zimbabwean hospitality - all crafted to make your stay both relaxing and memorable.
         </p>
         <img src="src/images/index/escape-image.jpg" class="w-full object-cover" alt="Example Suite 2" />
     </div>
 
     <!-- Amenities -->
-    <div id="amenities" class="h-20"></div>
+    <div id="amenities" class="md:h-20"></div>
     <div
          class="flex items-center justify-center h-20 px-4 max-w-6xl mx-auto mt-8">
         <h1 class="text-4xl text-green-800 font-medium"> Amenities </h1>
+    </div>
+
+    <!-- Amenities Description -->
+    <div
+        class="flex items-center justify-center px-4 max-w-6xl mx-auto mb-4">
+        <p class="text-xl md:text-2xl text-green-800 text-center">
+            At Mongi Guest House, every stay is designed for comfort, style, and convenience. Choose from a range of
+            beautifully appointed ensuite rooms to suit your needs: from cozy <span class="font-medium">Economy</span>
+            and <span class="font-medium">Standard</span> rooms to spacious <span class="font-medium">Superior</span>,
+            <span class="font-medium">Deluxe</span>, and <span class="font-medium">Junior</span> Suites. Each room
+            blends modern design with homely touches to create the perfect retreat after a day in Harare.
+        </p>
     </div>
 
     <!-- Amenities-Rooms -->
@@ -168,41 +182,41 @@
                   border-green-800 border-t-green-800/0">
             <div class="grid grid-cols-1 md:grid-cols-2 p-6">
                 <div
-                    class="text-2xl text-green-800">
+                    class="text-xl text-green-800 md:order-1 order-2">
                     <p class="mb-6">
-                        Choose between an Economy, Standard, Superior, Deluxe, and Junior ensuite. Each ensuite has a
-                        variety of amenities including:
+                        Every ensuite includes a variety of thoughtful features, such as:
                     </p>
-                    <ul class="pl-8 list-disc space-y-1">
-                        <li>Flat Screen Smart TV</li>
-                        <li>Digital Satellite Television (DSTV)</li>
+                    <ul class="pl-8 list-disc space-y-1 font-medium mb-8">
+                        <li>Flat Screen Smart TV <span class="font-normal">with</span> Digital Satellite Television (DSTV)</li>
                         <li>Unlimited High Speed Wi-Fi (Fiber)</li>
-                        <li>Mini Fridge (All rooms except, economy  + standard double)</li>
+                        <li>Mini Fridge <span class="font-normal italic">(available in all rooms except Economy & Standard Double)</span></li>
                         <li>Housekeeping Service Included</li>
                         <li>Hotel Quality Bed & Linens</li>
-                        <li>Private Bathroom with Walk-In Shower & Complementary Toiletries</li>
-                        <li>Tub Sofa</li>
-                        <li>Electric Kettle</li>
-                        <li>Lamps</li>
-                        <li>Portable Fans</li>
-                        <li>Nightstand (Except Standard Ensuites)</li>
-                        <li>USB Charging Port</li>
-                        <li>Full-Size Mirror</li>
-                        <li>Cabinet Drawer</li>
-                        <li>Desk & Chair</li>
+                        <li>Private Bathroom <span class="font-normal">with</span> Walk-In Shower & Complementary Toiletries</li>
+                        <li>Tub Sofa <span class="font-normal">and</span> Electric Kettle <span class="font-normal">for comfort and convenience</span></li>
+                        <li>Lamps, Portable Fans, USB Charging Port, <span class="font-normal">and Full-Size Mirror</span></li>
+                        <li>Desk & Chair, Cabinet Drawer, and Nightstand <span class="font-normal italic">(except Standard Ensuites)</span></li>
                     </ul>
+                    <a
+                        class="md:hidden max-md:flex items-center justify-center text-white text-2xl bg-green-800 px-12
+                               py-3 h-16 w-auto hover:bg-green-100 hover:text-green-600 rounded-md font-medium
+                               transition-colors duration-300 ease-in-out mt-auto md:mt-0"
+                        href="https://book.nightsbridge.com/37265" target="_blank"
+                    >
+                        Book Now
+                    </a>
                 </div>
                 <div
-                    class="grid place-items-center gap-4">
+                    class="md:order-2 order-1 grid place-items-center gap-4 max-md:mb-4">
                     <img
                         src="src/images/index/amenity-room.jpg"
                         class="w-full h-auto max-w-lg object-contain"
                         alt="Example Suite 2"
                     />
                     <a
-                            class="text-white text-2xl bg-green-800 px-16 py-3 h-16 w-auto hover:bg-green-100
-                                 hover:text-green-600 font-medium transition-colors duration-300 ease-in-out
-                                 items-center"
+                            class="max-md:hidden text-white text-2xl bg-green-800 px-12 py-3 h-16 w-auto hover:bg-green-100
+                                 hover:text-green-600 rounded-md font-medium transition-colors duration-300 ease-in-out
+                                 items-center mt-auto md:mt-0"
                             href="https://book.nightsbridge.com/37265" target="_blank"
                     >
                         Book Now
@@ -236,51 +250,76 @@
                   border-green-800 border-t-green-800/0">
             <div class="grid grid-cols-1 md:grid-cols-2 p-6">
                 <div
-                        class="text-2xl text-green-800">
+                        class="text-xl text-green-800 md:order-1 order-2">
                     <p class="mb-6">
-                        The Lodge has amenities for all including:
+                        Beyond your private ensuite, Mongi Guest House offers a variety of amenities for all guests to
+                        enjoy:
                     </p>
-                    <ul class="pl-8 list-disc space-y-1">
-                        <li>Breakfast, Lunch + Dinner</li>
-                        <li>Snacks + Beverages</li>
-                        <li>24-Hour Front Desk</li>
-                        <li>Shared TV/Lounge Area</li>
-                        <li>Microwave available</li>
-                        <li>DSTV (Digital Satellite TV)</li>
-                        <li>Unlimited High Speed Wi-Fi - Fibre</li>
-                        <li>Gated, Free Parking</li>
-                        <li>Local/Airport Transportation</li>
-                        <li>Beautiful Garden with Seating Areas</li>
-                        <li>Backup Power (Solar + Generator)</li>
-                        <li>Hot Water</li>
+                    <ul class="pl-8 list-disc space-y-1 font-medium mb-8">
+                        <li>Breakfast, Lunch & Dinner <span class="font-normal">available daily</span></li>
+                        <li>Snacks & Beverages <span class="font-normal">for purchase</span></li>
+                        <li>24-Hour Front Desk Service</li>
+                        <li>Shared TV/Lounge Area <span class="font-normal">and</span> Microwave Access</li>
+                        <li>DSTV & Unlimited Fiber Wi-Fi <span class="font-normal">throughout the property</span> </li>
+                        <li>Gated, Free Parking <span class="font-normal">with</span> 24-hour security </li>
+                        <li>Local & Airport Transportation <span class="font-normal">upon request</span></li>
+                        <li>Beautiful Garden with Seating Areas <span class="font-normal">for relaxation</span></li>
+                        <li>Reliable Hot Water</li>
+                        <li>Backup Power Supply (Solar + Generator) <span class="font-normal">for uninterrupted comfort</span></li>
                     </ul>
+                    <a
+                            class="md:hidden max-md:flex items-center justify-center text-white text-2xl bg-green-800 px-12
+                               py-3 h-16 w-auto hover:bg-green-100 hover:text-green-600 rounded-md font-medium
+                               transition-colors duration-300 ease-in-out mt-auto md:mt-0"
+                            href="https://book.nightsbridge.com/37265" target="_blank"
+                    >
+                        Book Now
+                    </a>
                 </div>
                 <div
-                        class="grid place-items-center gap-4">
+                        class="md:order-2 order-1 grid place-items-center gap-4 max-md:mb-4">
                     <img
-                            src="src/images/index/top-3.JPG"
+                            src="src/images/index/top-1.JPG"
                             class="w-full h-auto max-w-lg object-contain"
                             alt="Example Suite 2"
                     />
                     <a
-                            class="text-white text-2xl bg-green-800 px-16 py-3 h-16 w-auto hover:bg-green-100
-                                 hover:text-green-600 font-medium transition-colors duration-300 ease-in-out
-                                 items-center"
+                            class="max-md:hidden text-white text-2xl bg-green-800 px-12 py-3 h-16 w-auto hover:bg-green-100
+                                 hover:text-green-600 rounded-md font-medium transition-colors duration-300 ease-in-out
+                                 items-center mt-auto md:mt-0"
                             href="https://book.nightsbridge.com/37265" target="_blank"
                     >
                         Book Now
                     </a>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- Rooms -->
-    <div id="rooms" class="flex items-center justify-center h-16 px-4 max-w-6xl mx-auto mt-8">
-        <h1 class="text-4xl text-green-800 font-medium"> Rooms </h1>
+    <!-- Amenities Closure -->
+    <div class="flex flex-col space-y-4 items-center justify-center text-center px-4 max-w-6xl mx-auto mt-4">
+        <h2 class="text-2xl md:text-3xl text-green-900 font-medium">Your Comfort is Our Priority</h2>
+        <p class="text-xl md:text-2xl text-green-900">
+            Whether you’re visiting Harare for business or leisure, Mongi Guest House offers a calm, secure, and
+            welcoming atmosphere combining <span class="font-medium">modern conveniences</span>,
+            <span class="font-medium">exceptional service</span>, and the warmth of <span class="font-medium">Zimbabwean
+            hospitality</span>.
+        </p>
     </div>
-    <div class="flex items-center justify-center h-10 px-4 max-w-6xl mx-auto mb-4">
-    <p class="text-2xl text-green-800 font-medium">View our various rooms available at Mongi Guest House:</p>
+
+    <div id="rooms" class="md:h-10"></div>
+    <!-- Rooms -->
+    <div class="flex items-center justify-center h-16 px-4 max-w-6xl mx-auto mt-8">
+        <h1 class="text-4xl text-green-800 font-medium"> Our Rooms </h1>
+    </div>
+    <div class="flex items-center justify-center px-4 max-w-6xl mx-auto mb-4">
+    <p
+        class="text-xl md:text-2xl text-green-800 text-center py-3">
+        At Mongi Guest House, every room is designed with care, comfort, and elegance in mind. Whether you’re traveling
+        alone, as a couple, or with family, we have the perfect space to suit your needs — from our cozy Economy Rooms
+        to our luxurious Junior Suite with Balcony.
+    </p>
     </div>
 
     <!-- Rooms-Junior -->
@@ -291,7 +330,7 @@
                 class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
                 px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
         >
-            <span class="text-3xl">Junior Suite with Balcony</span>
+            <span class="text-2xl md:text-3xl">Junior Suite with Balcony</span>
             <!-- Arrow icon -->
             <svg id="arrowIconJunior" class="w-5 h-5 transform transition-transform duration-300"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -401,7 +440,7 @@
                 class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
                 px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
         >
-            <span class="text-3xl">Deluxe Family Suite</span>
+            <span class="text-2xl md:text-3xl">Deluxe Family Suite</span>
             <!-- Arrow icon -->
             <svg id="arrowIconFamily" class="w-5 h-5 transform transition-transform duration-300"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -508,7 +547,7 @@
                 class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
                 px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
         >
-            <span class="text-3xl">Deluxe Queen Suite</span>
+            <span class="text-2xl md:text-3xl">Deluxe Queen Suite</span>
             <!-- Arrow icon -->
             <svg id="arrowIconQueen" class="w-5 h-5 transform transition-transform duration-300"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -616,7 +655,7 @@
                 class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
                 px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
         >
-            <span class="text-3xl">Superior Double Room</span>
+            <span class="text-2xl md:text-3xl">Superior Double Room</span>
             <!-- Arrow icon -->
             <svg id="arrowIconSuperior" class="w-5 h-5 transform transition-transform duration-300"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -723,7 +762,7 @@
                 class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
                 px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
         >
-            <span class="text-3xl">Standard Double Room</span>
+            <span class="text-2xl md:text-3xl">Standard Double Room</span>
             <!-- Arrow icon -->
             <svg id="arrowIconStandard" class="w-5 h-5 transform transition-transform duration-300"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -830,7 +869,7 @@
                 class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
                 px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
         >
-            <span class="text-3xl">Economy Single (3/4 Bed)</span>
+            <span class="text-2xl md:text-3xl">Economy Single (3/4 Bed)</span>
             <!-- Arrow icon -->
             <svg id="arrowIconEconomy" class="w-5 h-5 transform transition-transform duration-300"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -972,19 +1011,42 @@
 
     <!-- Front Page Images (Bottom) -->
     <div class="flex items-center justify-center mt-12 p-4 max-w-6xl mx-auto gap-3">
-        <span class="text-green-800 text-2xl text-medium">Follow Us on Facebook!</span>
+        <span class="text-green-800 text-xl md:text-2xl text-medium">Follow Us on our socials:</span>
+        <!-- Facebook -->
         <a href="https://www.facebook.com/people/Mongi-Guest-House/61566407660600/?mibextid=LQQJ4d"
            target="_blank"
            class="transform hover:scale-105 transition-transform duration-300"
         >
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                 class="lucide lucide-facebook-icon lucide-facebook text-green-800 "
+                 class="lucide lucide-facebook-icon lucide-facebook text-green-800"
             >
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
             </svg>
         </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/mongilodge?igsh=YXltY3BnMnF3aHh6&utm_source=qr"
+           target="_blank"
+           class="transform hover:scale-105 transition-transform duration-300"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="lucide lucide-instagram-icon lucide-instagram text-green-800"
+            >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+            </svg>
+        </a>
+        <!-- Tiktok -->
+        <a href="https://www.tiktok.com/@mongilodge?_t=ZT-90KreGMDE1W&_r=1"
+           target="_blank"
+           class="transform hover:scale-105 transition-transform duration-300"
+        >
+            <img src="src/images/tiktok.svg" alt="TikTok" class="w-9">
+        </a>
     </div>
+
 
     <div class="grid grid-cols-3 gap-4 mx-auto px-4 max-w-6xl mt-8">
         <div class="aspect-[4/3] overflow-hidden">
@@ -1007,6 +1069,42 @@
             View Gallery
         </a>
     </div>
+
+    <!-- Frequently Asked Questions -->
+    <section class="max-w-6xl mx-auto px-4 mt-4">
+        <!-- Toggle button -->
+        <button
+                onclick="toggleSection('expandableSectionFAQ', 'arrowIconFAQ')"
+                class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
+                px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
+        >
+            <span class="text-2xl md:text-3xl">Frequently Asked Questions</span>
+            <!-- Arrow icon -->
+            <svg id="arrowIconFAQ" class="w-5 h-5 transform transition-transform duration-300"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Collapsible content -->
+        <div id="expandableSectionFAQ"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0
+                  border-green-800 border-t-green-800/0">
+                <div class="text-xl text-green-800">
+                    <ul class="pl-8 list-disc space-y-1 font-medium mb-8">
+                        <li>Do you have Wi-Fi? <span class="font-normal ml-2">Yes! Unlimited high-speed fiber Wi-Fi throughout.</span></li>
+                        <li>Power cuts? <span class="font-normal ml-2">We have backup solar + generator and reliable hot water.</span></li>
+                        <li>Airport pickup? <span class="font-normal ml-2">Yes! Tick in the form or WhatsApp us your flight details.</span></li>
+                        <li>Which room is most spacious? <span class="font-normal ml-2">The Junior Suite with Balcony (super-king, private balcony, spa-style bath).</span></li>
+                        <li>Family option? <span class="font-normal ml-2">Deluxe Family Room (two ¾ beds convertible to super-king).</span></li>
+                        <li>Meals? <span class="font-normal ml-2">Breakfast 24/7; Lunch/Dinner 11:00 - 22:00; Snacks 24/7.</span></li>
+                    </ul>
+
+                </div>
+
+        </div>
+    </section>
     <div class="h-10"></div>
 
     <!-- Footer -->
@@ -1015,9 +1113,11 @@
             <!-- Address -->
             <div class="text-center text-white">
                 <h1 class="text-3xl font-medium underline decoration-2">Address</h1>
-                <p class="font-light">17 Airdrie Road</p>
-                <p class="font-light">Eastlea, Harare</p>
-                <p class="font-light">Zimbabwe</p>
+                <div class="flex flex-col items-center">
+                    <p class="font-light text-xl">17 Airdrie Road</p>
+                    <p class="font-light text-xl">Eastlea, Harare</p>
+                    <p class="font-light text-xl">Zimbabwe</p>
+                </div>
             </div>
             <!-- Contact -->
             <div class="text-center text-white">
@@ -1030,13 +1130,30 @@
             <!-- Follow -->
             <div class="text-center text-white">
                 <h1 class="text-3xl font-medium underline decoration-2">Follow</h1>
-                <a
-                    class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
-                    href="https://www.facebook.com/people/Mongi-Guest-House/61566407660600/?mibextid=LQQJ4d"
-                    target="_blank"
-                >
-                    Facebook
-                </a>
+                <div class="flex flex-col items-center">
+                    <a
+                            class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                            href="https://www.facebook.com/people/Mongi-Guest-House/61566407660600/?mibextid=LQQJ4d"
+                            target="_blank"
+                    >
+                        Facebook
+                    </a>
+                    <a
+                            class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                            href="https://www.instagram.com/mongilodge?igsh=YXltY3BnMnF3aHh6&utm_source=qr"
+                            target="_blank"
+                    >
+                        Instagram
+                    </a>
+                    <a
+                            class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                            href="https://www.tiktok.com/@mongilodge?_t=ZT-90KreGMDE1W&_r=1"
+                            target="_blank"
+                    >
+                        TikTok
+                    </a>
+                </div>
+
             </div>
             <!-- Legal -->
             <div class="text-center text-white">

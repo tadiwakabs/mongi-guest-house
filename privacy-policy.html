@@ -6,10 +6,7 @@
     <meta name="description" content="Nestled in the heart of the vibrant city of Harare, Mongi Guest House welcomes
     guests with a wide array of exceptional amenities designed to create an atmosphere of comfort and tranquility. ">
     <link rel="icon" type="image/svg+xml" href="src/logo.png"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link href="./dist/output.css" rel="stylesheet">
-    <link href="./src/swiper-override.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
     <script src="index.js" defer></script>
 </head>
 <body class="bg-gray-100">
@@ -237,16 +234,16 @@
         <p class="flex gap-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                 class="lucide lucide-mail-icon lucide-mail text-blue-800">
+                 class="lucide lucide-mail-icon lucide-mail text-green-800">
                 <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
                 <rect x="2" y="4" width="20" height="16" rx="2"/>
             </svg>
-            <span class="text-green-800">info@mongilodge.com</span>
+            <a href="mailto:info@mongilodge.com" class="text-green-800">info@mongilodge.com</a>
         </p>
         <p class="flex gap-4 mt-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                 class="lucide lucide-map-pin-icon lucide-map-pin">
+                 class="lucide lucide-map-pin-icon lucide-map-pin text-green-800">
         <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
                 <circle cx="12" cy="10" r="3"/>
             </svg>
@@ -265,9 +262,11 @@
         <!-- Address -->
         <div class="text-center text-white">
             <h1 class="text-3xl font-medium underline decoration-2">Address</h1>
-            <p class="font-light">17 Airdrie Road</p>
-            <p class="font-light">Eastlea, Harare</p>
-            <p class="font-light">Zimbabwe</p>
+            <div class="flex flex-col items-center">
+                <p class="font-light text-xl">17 Airdrie Road</p>
+                <p class="font-light text-xl">Eastlea, Harare</p>
+                <p class="font-light text-xl">Zimbabwe</p>
+            </div>
         </div>
         <!-- Contact -->
         <div class="text-center text-white">
@@ -280,13 +279,30 @@
         <!-- Follow -->
         <div class="text-center text-white">
             <h1 class="text-3xl font-medium underline decoration-2">Follow</h1>
-            <a
-                    class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
-                    href="https://www.facebook.com/people/Mongi-Guest-House/61566407660600/?mibextid=LQQJ4d"
-                    target="_blank"
-            >
-                Facebook
-            </a>
+            <div class="flex flex-col items-center">
+                <a
+                        class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                        href="https://www.facebook.com/people/Mongi-Guest-House/61566407660600/?mibextid=LQQJ4d"
+                        target="_blank"
+                >
+                    Facebook
+                </a>
+                <a
+                        class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                        href="https://www.instagram.com/mongilodge?igsh=YXltY3BnMnF3aHh6&utm_source=qr"
+                        target="_blank"
+                >
+                    Instagram
+                </a>
+                <a
+                        class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                        href="https://www.tiktok.com/@mongilodge?_t=ZT-90KreGMDE1W&_r=1"
+                        target="_blank"
+                >
+                    TikTok
+                </a>
+            </div>
+
         </div>
         <!-- Legal -->
         <div class="text-center text-white">

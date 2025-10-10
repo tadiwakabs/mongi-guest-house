@@ -6,9 +6,7 @@
     <meta name="description" content="Nestled in the heart of the vibrant city of Harare, Mongi Guest House welcomes
     guests with a wide array of exceptional amenities designed to create an atmosphere of comfort and tranquility. ">
     <link rel="icon" type="image/svg+xml" href="src/logo.png"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link href="./dist/output.css" rel="stylesheet">
-    <link href="./src/swiper-override.css" rel="stylesheet">
     <script src="index.js" defer></script>
     <script src="gallery.js" defer></script>
 </head>
@@ -101,7 +99,7 @@
                 class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
                 px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
         >
-            <span class="text-3xl">Junior Suite with Balcony</span>
+            <span class="text-2xl md:text-3xl">Junior Suite with Balcony</span>
             <!-- Arrow icon -->
             <svg id="arrowIconJunior" class="w-5 h-5 transform transition-transform duration-300 rotate-180"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -163,7 +161,7 @@
                 class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
                 px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
         >
-            <span class="text-3xl">Deluxe Family Suite</span>
+            <span class="text-2xl md:text-3xl">Deluxe Family Suite</span>
             <!-- Arrow icon -->
             <svg id="arrowIconFamily" class="w-5 h-5 transform transition-transform duration-300 rotate-180"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -225,7 +223,7 @@
                 class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
                 px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
         >
-            <span class="text-3xl">Deluxe Queen Suite</span>
+            <span class="text-2xl md:text-3xl">Deluxe Queen Suite</span>
             <!-- Arrow icon -->
             <svg id="arrowIconQueen" class="w-5 h-5 transform transition-transform duration-300 rotate-180"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -287,7 +285,7 @@
                 class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
                 px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
         >
-            <span class="text-3xl">Superior Double Room</span>
+            <span class="text-2xl md:text-3xl">Superior Double Room</span>
             <!-- Arrow icon -->
             <svg id="arrowIconSuperior" class="w-5 h-5 transform transition-transform duration-300 rotate-180"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -349,7 +347,7 @@
                 class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
                 px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
         >
-            <span class="text-3xl">Standard Double Room</span>
+            <span class="text-2xl md:text-3xl">Standard Double Room</span>
             <!-- Arrow icon -->
             <svg id="arrowIconStandard" class="w-5 h-5 transform transition-transform duration-300 rotate-180"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -411,7 +409,7 @@
                 class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
                 px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
         >
-            <span class="text-3xl">Economy Single (3/4 Bed)</span>
+            <span class="text-2xl md:text-3xl">Economy Single (3/4 Bed)</span>
             <!-- Arrow icon -->
             <svg id="arrowIconEconomy" class="w-5 h-5 transform transition-transform duration-300 rotate-180"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -725,9 +723,11 @@
         <!-- Address -->
         <div class="text-center text-white">
             <h1 class="text-3xl font-medium underline decoration-2">Address</h1>
-            <p class="font-light">17 Airdrie Road</p>
-            <p class="font-light">Eastlea, Harare</p>
-            <p class="font-light">Zimbabwe</p>
+            <div class="flex flex-col items-center">
+                <p class="font-light text-xl">17 Airdrie Road</p>
+                <p class="font-light text-xl">Eastlea, Harare</p>
+                <p class="font-light text-xl">Zimbabwe</p>
+            </div>
         </div>
         <!-- Contact -->
         <div class="text-center text-white">
@@ -740,13 +740,30 @@
         <!-- Follow -->
         <div class="text-center text-white">
             <h1 class="text-3xl font-medium underline decoration-2">Follow</h1>
-            <a
-                    class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
-                    href="https://www.facebook.com/people/Mongi-Guest-House/61566407660600/?mibextid=LQQJ4d"
-                    target="_blank"
-            >
-                Facebook
-            </a>
+            <div class="flex flex-col items-center">
+                <a
+                        class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                        href="https://www.facebook.com/people/Mongi-Guest-House/61566407660600/?mibextid=LQQJ4d"
+                        target="_blank"
+                >
+                    Facebook
+                </a>
+                <a
+                        class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                        href="https://www.instagram.com/mongilodge?igsh=YXltY3BnMnF3aHh6&utm_source=qr"
+                        target="_blank"
+                >
+                    Instagram
+                </a>
+                <a
+                        class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                        href="https://www.tiktok.com/@mongilodge?_t=ZT-90KreGMDE1W&_r=1"
+                        target="_blank"
+                >
+                    TikTok
+                </a>
+            </div>
+
         </div>
         <!-- Legal -->
         <div class="text-center text-white">

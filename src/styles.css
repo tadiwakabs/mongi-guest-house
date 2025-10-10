@@ -11,3 +11,58 @@ header {
     inset-inline: 0;
     padding-top: env(safe-area-inset-top);
 }
+
+.card {
+    @apply bg-[#e7e8ed] shadow;
+}
+
+@utility card-hover {
+    @apply transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg;
+    text-shadow: 0 0 10px rgba(167, 139, 250, .5);
+}
+
+/* Styling for Contact - Country Codes*/
+#dropdown {
+    transition: all 0.2s ease-in-out;
+}
+
+#countryList div {
+    transition: background-color 0.2s ease-in-out;
+}
+/* Dropdown container should *not* scroll */
+#dropdown {
+    max-height: none; /* ensure it grows naturally */
+    overflow: visible; /* no scroll here */
+    transition: all 0.2s ease-in-out;
+}
+
+#countryList {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+/* Chrome / Edge / Safari scrollbar styling */
+#countryList::-webkit-scrollbar {
+    width: 6px;
+}
+
+#countryList::-webkit-scrollbar-thumb {
+    background-color: #166534; /* Tailwind green-800 */
+    border-radius: 8px;
+    border: 2px solid #f9fafb; /* white border for contrast */
+}
+
+#countryList::-webkit-scrollbar-thumb:hover {
+    background-color: #15803d; /* Tailwind green-700 */
+}
+
+#countryList::-webkit-scrollbar-track {
+    background: #f3f4f6; /* Tailwind gray-100 */
+    border-radius: 8px;
+}
+
+/* Firefox scrollbar styling */
+#countryList {
+    scrollbar-width: thin;
+    scrollbar-color: #166534 #f3f4f6; /* thumb, track */
+}
