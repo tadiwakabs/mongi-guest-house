@@ -349,6 +349,9 @@
   .aspect-\[4\/3\] {
     aspect-ratio: 4/3;
   }
+  .h-3 {
+    height: calc(var(--spacing) * 3);
+  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }

@@ -51,6 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedFlag = document.getElementById("selectedFlag");
     const selectedCode = document.getElementById("selectedCode");
 
+    document.getElementById("countryCode").value = "+263";
+
     // Fetch and load countries.json
     fetch("./src/data/countries.json")
         .then(res => res.json())
@@ -87,13 +89,16 @@ document.addEventListener("DOMContentLoaded", () => {
                             <span>${c.dial}</span>`;
                         div.addEventListener("click", () => {
                             selectedFlag.innerHTML = `
-                              <img src="https://flagcdn.com/24x18/${c.flag.toLowerCase()}.png"
-                                   alt="${c.name}" class="w-8 h-4 mr-1">`;
+                                <img src="https://flagcdn.com/24x18/${c.flag.toLowerCase()}.png"
+                                     alt="${c.name}" class="w-8 h-4 mr-1">
+                            `;
                             selectedCode.textContent = c.dial;
+                            document.getElementById("countryCode").value = c.dial;
                             dropdown.classList.add("hidden");
                             phoneInput.value = "";
                             phoneInput.placeholder = "Phone";
                         });
+
                         countryList.appendChild(div);
                     });
             }
