@@ -971,17 +971,53 @@
     </section>
 
     <!-- Location -->
-    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 p-6 max-w-6xl mx-auto gap-4">
-        <div class="">
-            <h1 class="text-4xl text-green-800 font-semibold text-center">Convenient Location</h1>
-            <p class="mt-10 text-xl text-green-800">
-                Mongi Guest House is located in the heart of Harare, just 8 minutes away from CBD, 18 minutes from
-                Robert Gabriel Mugabe International Airport, 7 minutes from Chapman Golf Club, and 12 minutes from
-                Royal Harare Golf Club. It is also 15 minutes from Harare Botanical Gardens, and 4 minutes from
-                Mukuvisi Woodlands.
-            </p>
+    <div class="flex items-center justify-center text-green-800 font-semibold mt-12 text-4xl">Convenient Location</div>
+    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 p-6 max-w-6xl mx-auto gap-4">
+        <!-- Location-Description -->
+        <div class="flex items-center justify-center gap-4 text-green-800 md:text-xl text-center order-2 md:order-1">
+            <!-- Location-Location -->
+            <div class="pr-8 border-r border-r-green-800 border-r-2 space-y-2 font-medium">
+                <p class="font-bold md:text-2xl flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-map-pin-icon lucide-map-pin justify-center">"
+                    >
+                        <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8
+                         8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <span class="mr-4">Location</span>
+                </p>
+                <p>Airport</p>
+                <p>CBD</p>
+                <p>Chapman Golf Club</p>
+                <p>Royal Harare Golf Club</p>
+                <p class="max-md:text-sm">Harare Botanical Gardens</p>
+                <p>Mukuvisi Woodlands</p>
+            </div>
+            <!-- Location-Distance -->
+            <div class="space-y-2 font-medium">
+                <p class="font-bold md:text-2xl flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-timer-icon lucide-timer"
+                    >
+                        <line x1="10" x2="14" y1="2" y2="2"/>
+                        <line x1="12" x2="15" y1="14" y2="11"/>
+                        <circle cx="12" cy="14" r="8"/>
+                    </svg>
+                    <span class="mr-4">Distance</span>
+                </p>
+                <p>18 min.</p>
+                <p>8 min.</p>
+                <p>7 min.</p>
+                <p>12 min.</p>
+                <p>15 min.</p>
+                <p>4 min.</p>
+            </div>
         </div>
-        <div class="flex flex-col items-center justify-center gap-2">
+
+        <!-- Map -->
+        <div class="flex flex-col items-center justify-center gap-2 order-1 md:order-2">
             <div class="transform hover:scale-102 transition-transform duration-300 flex items-center justify-center">
                 <a
                     href="https://www.google.com/maps/place/Mongi+Guest+House/@-17.8342272,31.0311847,13z/data=!4m9!3m8!1s0x1931bb396a739083:0x48e93fb7e998c39c!5m2!4m1!1i2!8m2!3d-17.8312273!4d31.0954863!16s%2Fg%2F11ltsd091j?entry=ttu&g_ep=EgoyMDI1MDkyMy4wIKXMDSoASAFQAw%3D%3D"
@@ -1011,7 +1047,7 @@
 
     <!-- Front Page Images (Bottom) -->
     <div class="flex items-center justify-center mt-12 p-4 max-w-6xl mx-auto gap-3">
-        <span class="text-green-800 text-xl md:text-2xl text-medium">Follow Us on our socials:</span>
+        <span class="text-green-800 text-xl md:text-2xl md:font-medium">Follow Us on our socials:</span>
         <!-- Facebook -->
         <a href="https://www.facebook.com/people/Mongi-Guest-House/61566407660600/?mibextid=LQQJ4d"
            target="_blank"
