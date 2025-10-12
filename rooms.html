@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongi Guest House</title>
+    <meta name="description" content="Nestled in the heart of the vibrant city of Harare, Mongi Guest House welcomes
+    guests with a wide array of exceptional amenities designed to create an atmosphere of comfort and tranquility.">
+    <link rel="icon" type="image/svg+xml" href="src/logo.png"/>
+    <link href="./dist/output.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+    <script>
+        // Smooth scroll if a hash is present in the URL
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.location.hash) {
+                const target = document.querySelector(window.location.hash);
+                if (target) {
+                    // Wait briefly to ensure layout is ready
+                    setTimeout(() => {
+                        target.scrollIntoView({ behavior: "smooth" });
+                    }, 300);
+                }
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Wait for layout
+            setTimeout(() => {
+                // Get the hash from URL (e.g. #junior)
+                const hash = window.location.hash;
+                if (hash) {
+                    // Map section IDs to their corresponding collapsible IDs
+                    const sectionMap = {
+                        "#junior": { content: "expandableSectionJunior", arrow: "arrowIconJunior" },
+                        "#family": { content: "expandableSectionFamily", arrow: "arrowIconFamily" },
+                        "#queen": { content: "expandableSectionQueen", arrow: "arrowIconQueen" },
+                        "#superior": { content: "expandableSectionSuperior", arrow: "arrowIconSuperior" },
+                        "#standard": { content: "expandableSectionStandard", arrow: "arrowIconStandard" },
+                        "#economy": { content: "expandableSectionEconomy", arrow: "arrowIconEconomy" },
+                    };
+
+                    const match = sectionMap[hash];
+                    if (match) {
+                        // Expand the section
+                        toggleSection(match.content, match.arrow);
+
+                        // Smooth scroll to bring it into view
+                        document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });
+                    }
+                }
+            }, 300);
+        });
+    </script>
+</head>
+<body class="bg-gray-100">
+<!-- Navbar -->
+<header class="fixed w-full z-40 bg-white shadow-md">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+        <!-- Logo -->
+        <div class="flex items-center space-x-4">
+            <img src="src/logo.png" width="44" alt="logo">
+            <a href="index.html" class="text-2xl font-bold text-green-800">
+                Mongi Guest House
+            </a>
+        </div>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex space-x-6 text-green-800 font-medium text-sm lg:text-lg">
+            <a href="index.html" class="hover:text-green-600 text-center">Home</a>
+            <a href="rooms.html" class="hover:text-green-600 text-center">Rooms</a>
+            <a href="gallery.html" class="hover:text-green-600 text-center">Gallery</a>
+            <a href="contact.html" class="hover:text-green-600 text-center">Contact</a>
+            <a href="https://book.nightsbridge.com/37265"
+               class="hover:text-green-600 text-center" target="_blank">Book Now</a>
+            <a href="src/Mongi_food_menu.pdf" class="hover:text-green-600 text-center"  target="_blank">Food Menu</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" type="button" class="md:hidden p-2 text-green-800 focus:outline-none z-50">
+            <!-- Hamburger Icon -->
+            <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg"
+                 class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+
+            <!-- Close Icon -->
+            <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg"
+                 class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div id="mobileMenu"
+         class="fixed inset-0 bg-white bg-opacity-95 backdrop-blur-md z-30 flex flex-col
+              items-center justify-center space-y-8 text-2xl font-semibold text-green-800
+              opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+    >
+        <a href="index.html" class="hover:text-green-600" onclick="toggleMenu()">Home</a>
+        <a href="rooms.html" class="hover:text-green-600" onclick="toggleMenu()">Rooms</a>
+        <a href="gallery.html" class="hover:text-green-600" onclick="toggleMenu()">Gallery</a>
+        <a href="contact.html" class="hover:text-green-600" onclick="toggleMenu()">Contact</a>
+        <a href="https://book.nightsbridge.com/37265" target="_blank"
+           class="hover:text-green-600" onclick="toggleMenu()">Book Now</a>
+        <a href="src/Mongi_food_menu.pdf" class="hover:text-green-600"  target="_blank" onclick="toggleMenu()">
+            Food Menu</a>
+    </div>
+</header>
+
+<div class="pt-20">
+    <!-- Title -->
+    <div class="flex items-center justify-center h-30 sm:h-40 px-4 max-w-6xl mx-auto">
+        <h1 class="text-4xl md:text-7xl font-bold text-green-900">Mongi Guest House</h1>
+    </div>
+
+    <!-- Headline -->
+    <div class="flex items-center justify-center text-center px-4 max-w-6xl mx-auto">
+        <h1 class="text-2xl md:text-4xl font-bold text-green-900">Our Rooms</h1>
+    </div>
+
+    <div class="flex items-center justify-center px-4 max-w-6xl mx-auto mb-4">
+        <p
+            class="text-xl md:text-2xl text-green-800 text-center py-3">
+            At Mongi Guest House, every room is designed with care, comfort, and elegance in mind. Whether you’re traveling
+            alone, as a couple, or with family, we have the perfect space to suit your needs, from our cozy Economy Rooms
+            to our luxurious Junior Suite.
+        </p>
+    </div>
+
+    <!-- Rooms-Junior -->
+    <section id="junior" class="max-w-6xl mx-auto px-4 py-0.5">
+        <!-- Toggle button -->
+        <button
+                onclick="toggleSection('expandableSectionJunior', 'arrowIconJunior')"
+                class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
+                px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
+        >
+            <span class="text-2xl md:text-3xl">Junior Suite with Balcony</span>
+            <!-- Arrow icon -->
+            <svg id="arrowIconJunior" class="w-5 h-5 transform transition-transform duration-300"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Collapsible content -->
+        <div id="expandableSectionJunior"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0
+                  border-green-800 border-t-green-800/0">
+            <div class="grid grid-cols-1 md:grid-cols-2 p-6">
+                <div
+                        class="text-xl md:text-2xl text-green-800 order-2 md:order-1">
+                    <p class="mb-6">
+                        This Junior Room is the best room in our guest house, offering an exceptional blend of luxury,
+                        comfort, and modern amenities including:
+                    </p>
+                    <ul class="pl-8 list-disc space-y-1">
+                        <li>Newly Remodeled Room, with Modern Finishing</li>
+                        <li>Private Balcony</li>
+                        <li>Spacious Super King-Size Bed, Which Can Be Converted To Two 3/4 Size Beds</li>
+                        <li>Modern, Spacious Spa-Like Bathroom with Marble-Look Shower Walls, and Black & White
+                            Mosaic-Tiled Floors to Complement</li>
+                        <li>Refrigerator</li>
+                        <li>Three-Seater Couch </li>
+                    </ul>
+                    <div class="flex md:hidden items-center justify-center gap-4">
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                               px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                               hover:bg-green-100 hover:text-green-600 font-medium
+                               transition-colors duration-300 ease-in-out"
+                                href="gallery.html"
+                        >
+                            View Gallery
+                        </a>
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                           px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                           hover:bg-green-100 hover:text-green-600 font-medium
+                           transition-colors duration-300 ease-in-out"
+                                href="https://book.nightsbridge.com/37265" target="_blank"
+                        >
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                <div class="grid place-items-center bg-gray-100 order-1 md:order-2 max-md:mb-4">
+                    <!-- Carousel -->
+                    <div class="carousel relative overflow-hidden max-w-2xl mx-auto">
+                        <!-- Viewport -->
+                        <div class="h-60 md:h-80 relative">
+                            <!-- Track -->
+                            <div class="carousel-track flex transition-transform duration-500 h-full">
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/junior1.jpg"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Junior 1">
+                                </div>
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/junior2.jpg"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Junior 2">
+                                </div>
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/junior3.jpg"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Junior 3">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Prev Button -->
+                        <button
+                                class="prevBtn absolute top-1/2 left-4 -translate-y-1/2 flex items-center justify-center
+                                w-10 h-10 bg-gray-100 border border-green-800 rounded-full shadow cursor-pointer
+                                hover:bg-green-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="w-5 h-5 text-green-800 hover:text-white"
+                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-6-7 6-7" />
+                            </svg>
+                        </button>
+
+                        <!-- Next Button -->
+                        <button
+                                class="nextBtn absolute top-1/2 right-4 -translate-y-1/2 flex items-center justify-center
+                                w-10 h-10 bg-gray-100 border border-green-800 rounded-full shadow cursor-pointer
+                                hover:bg-green-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="w-5 h-5 text-green-800 hover:text-white"
+                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l6 7-6 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="hidden md:flex items-center justify-center gap-4">
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                                   px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                                   hover:bg-green-100 hover:text-green-600 font-medium
+                                   transition-colors duration-300 ease-in-out"
+                                href="gallery.html"
+                        >
+                            View Gallery
+                        </a>
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                               px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                               hover:bg-green-100 hover:text-green-600 font-medium
+                               transition-colors duration-300 ease-in-out"
+                                href="https://book.nightsbridge.com/37265" target="_blank"
+                        >
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Rooms-Family -->
+    <section id="family" class="max-w-6xl mx-auto px-4 py-0.5">
+        <!-- Toggle button -->
+        <button
+                onclick="toggleSection('expandableSectionFamily', 'arrowIconFamily')"
+                class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
+                px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
+        >
+            <span class="text-2xl md:text-3xl">Deluxe Family Suite</span>
+            <!-- Arrow icon -->
+            <svg id="arrowIconFamily" class="w-5 h-5 transform transition-transform duration-300"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Collapsible content -->
+        <div id="expandableSectionFamily"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0
+                  border-green-800 border-t-green-800/0">
+            <div class="grid grid-cols-1 md:grid-cols-2 p-6">
+                <div
+                        class="text-xl md:text-2xl text-green-800 order-2 md:order-1">
+                    <p class="mb-6">
+                        Our brand new Family Room is designed with both flexibility and comfort in mind, offering an
+                        ideal space for families, couples, or anyone seeking extra room to unwind. The room features:
+                    </p>
+                    <ul class="pl-8 list-disc space-y-1">
+                        <li>Newly Remodeled Room, with Modern Finishing</li>
+                        <li>Two 3/4 Size Beds, Which Can Be Converted into a Super-King Size Bed</li>
+                        <li>Modern, Spacious Spa-Like Bathroom with Marble-Look Shower Walls, and Black & White
+                            Mosaic-Tiled Floors to Complement</li>
+                    </ul>
+                    <div class="flex md:hidden items-center justify-center gap-4">
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                               px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                               hover:bg-green-100 hover:text-green-600 font-medium
+                               transition-colors duration-300 ease-in-out"
+                                href="gallery.html"
+                        >
+                            View Gallery
+                        </a>
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                           px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                           hover:bg-green-100 hover:text-green-600 font-medium
+                           transition-colors duration-300 ease-in-out"
+                                href="https://book.nightsbridge.com/37265" target="_blank"
+                        >
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                <div class="grid place-items-center bg-gray-100 order-1 md:order-2 max-md:mb-4">
+                    <!-- Carousel -->
+                    <div class="carousel relative overflow-hidden max-w-2xl mx-auto">
+                        <!-- Viewport -->
+                        <div class="h-60 md:h-80 relative">
+                            <!-- Track -->
+                            <div class="carousel-track flex transition-transform duration-500 h-full">
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/family1.jpg"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Family 1">
+                                </div>
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/family6.jpg"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Family 2">
+                                </div>
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/family7.jpg"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Family 3">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Prev Button -->
+                        <button
+                                class="prevBtn absolute top-1/2 left-4 -translate-y-1/2 flex items-center justify-center
+                                w-10 h-10 bg-gray-100 border border-green-800 rounded-full shadow cursor-pointer
+                                hover:bg-green-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="w-5 h-5 text-green-800 hover:text-white"
+                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-6-7 6-7" />
+                            </svg>
+                        </button>
+
+                        <!-- Next Button -->
+                        <button
+                                class="nextBtn absolute top-1/2 right-4 -translate-y-1/2 flex items-center justify-center
+                                w-10 h-10 bg-gray-100 border border-green-800 rounded-full shadow cursor-pointer
+                                hover:bg-green-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="w-5 h-5 text-green-800 hover:text-white"
+                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l6 7-6 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="hidden md:flex items-center justify-center gap-4">
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                                   px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                                   hover:bg-green-100 hover:text-green-600 font-medium
+                                   transition-colors duration-300 ease-in-out"
+                                href="gallery.html"
+                        >
+                            View Gallery
+                        </a>
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                               px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                               hover:bg-green-100 hover:text-green-600 font-medium
+                               transition-colors duration-300 ease-in-out"
+                                href="https://book.nightsbridge.com/37265" target="_blank"
+                        >
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Rooms-Queen -->
+    <section id="queen" class="max-w-6xl mx-auto px-4 py-0.5">
+        <!-- Toggle button -->
+        <button
+                onclick="toggleSection('expandableSectionQueen', 'arrowIconQueen')"
+                class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
+                px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
+        >
+            <span class="text-2xl md:text-3xl">Deluxe Queen Suite</span>
+            <!-- Arrow icon -->
+            <svg id="arrowIconQueen" class="w-5 h-5 transform transition-transform duration-300"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Collapsible content -->
+        <div id="expandableSectionQueen"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0
+                  border-green-800 border-t-green-800/0">
+            <div class="grid grid-cols-1 md:grid-cols-2 p-6">
+                <div
+                        class="text-xl md:text-2xl text-green-800 order-2 md:order-1">
+                    <p class="mb-6">
+                        Our brand new Deluxe Room offers a stylish and comfortable retreat, perfect for those seeking
+                        both relaxation and modern convenience. Amenities include:
+                    </p>
+                    <ul class="pl-8 list-disc space-y-1">
+                        <li>Newly Remodeled Room, with Modern Finishing</li>
+                        <li>Plush Queen-Sized Bed</li>
+                        <li>Modern, Spacious Spa-Like Bathroom with Marble-Look Shower Walls, and Black & White
+                            Mosaic-Tiled Floors to Complement</li>
+                        <li>Sleek, Lighted Headboard</li>
+                    </ul>
+                    <div class="flex md:hidden items-center justify-center gap-4">
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                               px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                               hover:bg-green-100 hover:text-green-600 font-medium
+                               transition-colors duration-300 ease-in-out"
+                                href="gallery.html"
+                        >
+                            View Gallery
+                        </a>
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                           px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                           hover:bg-green-100 hover:text-green-600 font-medium
+                           transition-colors duration-300 ease-in-out"
+                                href="https://book.nightsbridge.com/37265" target="_blank"
+                        >
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                <div class="grid place-items-center bg-gray-100 order-1 md:order-2 max-md:mb-4">
+                    <!-- Carousel -->
+                    <div class="carousel relative overflow-hidden max-w-2xl mx-auto">
+                        <!-- Viewport -->
+                        <div class="h-60 md:h-80 relative">
+                            <!-- Track -->
+                            <div class="carousel-track flex transition-transform duration-500 h-full">
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/queen1.jpg"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Queen 1">
+                                </div>
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/queen4.jpg"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Queen 2">
+                                </div>
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/queen3.png"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Queen 3">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Prev Button -->
+                        <button
+                                class="prevBtn absolute top-1/2 left-4 -translate-y-1/2 flex items-center justify-center
+                                w-10 h-10 bg-gray-100 border border-green-800 rounded-full shadow cursor-pointer
+                                hover:bg-green-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="w-5 h-5 text-green-800 hover:text-white"
+                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-6-7 6-7" />
+                            </svg>
+                        </button>
+
+                        <!-- Next Button -->
+                        <button
+                                class="nextBtn absolute top-1/2 right-4 -translate-y-1/2 flex items-center justify-center
+                                w-10 h-10 bg-gray-100 border border-green-800 rounded-full shadow cursor-pointer
+                                hover:bg-green-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="w-5 h-5 text-green-800 hover:text-white"
+                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l6 7-6 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="hidden md:flex items-center justify-center gap-4">
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                                   px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                                   hover:bg-green-100 hover:text-green-600 font-medium
+                                   transition-colors duration-300 ease-in-out"
+                                href="gallery.html"
+                        >
+                            View Gallery
+                        </a>
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                               px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                               hover:bg-green-100 hover:text-green-600 font-medium
+                               transition-colors duration-300 ease-in-out"
+                                href="https://book.nightsbridge.com/37265" target="_blank"
+                        >
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Rooms-Superior -->
+    <section id="superior" class="max-w-6xl mx-auto px-4 py-0.5">
+        <!-- Toggle button -->
+        <button
+                onclick="toggleSection('expandableSectionSuperior', 'arrowIconSuperior')"
+                class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
+                px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
+        >
+            <span class="text-2xl md:text-3xl">Superior Double Room</span>
+            <!-- Arrow icon -->
+            <svg id="arrowIconSuperior" class="w-5 h-5 transform transition-transform duration-300"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Collapsible content -->
+        <div id="expandableSectionSuperior"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0
+                  border-green-800 border-t-green-800/0">
+            <div class="grid grid-cols-1 md:grid-cols-2 p-6">
+                <div
+                        class="text-xl md:text-2xl text-green-800 order-2 md:order-1">
+                    <p class="mb-6">
+                        Our Superior room offers the perfect balance of practicality and comfort, with features
+                        including:
+                    </p>
+                    <ul class="pl-8 list-disc space-y-1">
+                        <li>Plush Double Bed with Hotel-Quality Linens</li>
+                        <li>Sleek, Lighted Headboard</li>
+                        <li>Small, Private Walk-In Shower</li>
+                        <li>Spacious Wardrobe for Storage</li>
+                    </ul>
+                    <div class="flex md:hidden items-center justify-center gap-4">
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                               px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                               hover:bg-green-100 hover:text-green-600 font-medium
+                               transition-colors duration-300 ease-in-out"
+                                href="gallery.html"
+                        >
+                            View Gallery
+                        </a>
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                           px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                           hover:bg-green-100 hover:text-green-600 font-medium
+                           transition-colors duration-300 ease-in-out"
+                                href="https://book.nightsbridge.com/37265" target="_blank"
+                        >
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                <div class="grid place-items-center bg-gray-100 order-1 md:order-2 max-md:mb-4">
+                    <!-- Carousel -->
+                    <div class="carousel relative overflow-hidden max-w-2xl mx-auto">
+                        <!-- Viewport -->
+                        <div class="h-60 md:h-80 relative">
+                            <!-- Track -->
+                            <div class="carousel-track flex transition-transform duration-500 h-full">
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/superior1.jpg"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Superior 1">
+                                </div>
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/superior2.jpg"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Superior 2">
+                                </div>
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/superior3.jpg"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Superior 3">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Prev Button -->
+                        <button
+                                class="prevBtn absolute top-1/2 left-4 -translate-y-1/2 flex items-center justify-center
+                                w-10 h-10 bg-gray-100 border border-green-800 rounded-full shadow cursor-pointer
+                                hover:bg-green-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="w-5 h-5 text-green-800 hover:text-white"
+                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-6-7 6-7" />
+                            </svg>
+                        </button>
+
+                        <!-- Next Button -->
+                        <button
+                                class="nextBtn absolute top-1/2 right-4 -translate-y-1/2 flex items-center justify-center
+                                w-10 h-10 bg-gray-100 border border-green-800 rounded-full shadow cursor-pointer
+                                hover:bg-green-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="w-5 h-5 text-green-800 hover:text-white"
+                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l6 7-6 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="hidden md:flex items-center justify-center gap-4">
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                                   px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                                   hover:bg-green-100 hover:text-green-600 font-medium
+                                   transition-colors duration-300 ease-in-out"
+                                href="gallery.html"
+                        >
+                            View Gallery
+                        </a>
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                               px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                               hover:bg-green-100 hover:text-green-600 font-medium
+                               transition-colors duration-300 ease-in-out"
+                                href="https://book.nightsbridge.com/37265" target="_blank"
+                        >
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Rooms-Standard -->
+    <section id="standard" class="max-w-6xl mx-auto px-4 py-0.5">
+        <!-- Toggle button -->
+        <button
+                onclick="toggleSection('expandableSectionStandard', 'arrowIconStandard')"
+                class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
+                px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
+        >
+            <span class="text-2xl md:text-3xl">Standard Double Room</span>
+            <!-- Arrow icon -->
+            <svg id="arrowIconStandard" class="w-5 h-5 transform transition-transform duration-300"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Collapsible content -->
+        <div id="expandableSectionStandard"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0
+                  border-green-800 border-t-green-800/0">
+            <div class="grid grid-cols-1 md:grid-cols-2 p-6">
+                <div
+                        class="text-xl md:text-2xl text-green-800 order-2 md:order-1">
+                    <p class="mb-6">
+                        Our Standard room is cozy and is thoughtfully designed to maximize comfort and convenience,
+                        with amenities such as:
+                    </p>
+                    <ul class="pl-8 list-disc space-y-1">
+                        <li>Double Bed with Hotel-Quality Linens</li>
+                        <li>Upholstered Headboard</li>
+                        <li>Small Private Walk-In Shower</li>
+                        <li>Spacious Wardrobe for Storage </li>
+                    </ul>
+                    <div class="flex md:hidden items-center justify-center gap-4">
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                               px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                               hover:bg-green-100 hover:text-green-600 font-medium
+                               transition-colors duration-300 ease-in-out"
+                                href="gallery.html"
+                        >
+                            View Gallery
+                        </a>
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                           px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                           hover:bg-green-100 hover:text-green-600 font-medium
+                           transition-colors duration-300 ease-in-out"
+                                href="https://book.nightsbridge.com/37265" target="_blank"
+                        >
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                <div class="grid place-items-center bg-gray-100 order-1 md:order-2 max-md:mb-4">
+                    <!-- Carousel -->
+                    <div class="carousel relative overflow-hidden max-w-2xl mx-auto">
+                        <!-- Viewport -->
+                        <div class="h-60 md:h-80 relative">
+                            <!-- Track -->
+                            <div class="carousel-track flex transition-transform duration-500 h-full">
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/standard1.jpeg"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Standard 1">
+                                </div>
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/standard2.jpeg"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Standard 2">
+                                </div>
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/standard3.jpeg"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Standard 3">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Prev Button -->
+                        <button
+                                class="prevBtn absolute top-1/2 left-4 -translate-y-1/2 flex items-center justify-center
+                                w-10 h-10 bg-gray-100 border border-green-800 rounded-full shadow cursor-pointer
+                                hover:bg-green-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="w-5 h-5 text-green-800 hover:text-white"
+                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-6-7 6-7" />
+                            </svg>
+                        </button>
+
+                        <!-- Next Button -->
+                        <button
+                                class="nextBtn absolute top-1/2 right-4 -translate-y-1/2 flex items-center justify-center
+                                w-10 h-10 bg-gray-100 border border-green-800 rounded-full shadow cursor-pointer
+                                hover:bg-green-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="w-5 h-5 text-green-800 hover:text-white"
+                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l6 7-6 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="hidden md:flex items-center justify-center gap-4">
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                                   px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                                   hover:bg-green-100 hover:text-green-600 font-medium
+                                   transition-colors duration-300 ease-in-out"
+                                href="gallery.html"
+                        >
+                            View Gallery
+                        </a>
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                               px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                               hover:bg-green-100 hover:text-green-600 font-medium
+                               transition-colors duration-300 ease-in-out"
+                                href="https://book.nightsbridge.com/37265" target="_blank"
+                        >
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Rooms-Economy -->
+    <section id="economy" class="max-w-6xl mx-auto px-4 py-0.5">
+        <!-- Toggle button -->
+        <button
+                onclick="toggleSection('expandableSectionEconomy', 'arrowIconEconomy')"
+                class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
+                px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
+        >
+            <span class="text-2xl md:text-3xl">Economy Single (3/4 Bed)</span>
+            <!-- Arrow icon -->
+            <svg id="arrowIconEconomy" class="w-5 h-5 transform transition-transform duration-300"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Collapsible content -->
+        <div id="expandableSectionEconomy"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0
+                  border-green-800 border-t-green-800/0">
+            <div class="grid grid-cols-1 md:grid-cols-2 p-6">
+                <div
+                        class="text-xl md:text-2xl text-green-800 order-2 md:order-1">
+                    <p class="mb-6">
+                        Our Economy Room is cozy yet modern, offering a perfect blend of comfort and style. Amenities
+                        include:
+                    </p>
+                    <ul class="pl-8 list-disc space-y-1">
+                        <li>Cozy, 3/4-Size Bed, Which is Larger than a Standard Single but Smaller than a
+                            Double-Size Bed</li>
+                        <li>Upholstered Headboard</li>
+                        <li>Spacious Wardrobe for Storage</li>
+                        <li>Small Private Walk-In Shower</li>
+                    </ul>
+                    <div class="flex md:hidden items-center justify-center gap-4">
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                               px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                               hover:bg-green-100 hover:text-green-600 font-medium
+                               transition-colors duration-300 ease-in-out"
+                                href="gallery.html"
+                        >
+                            View Gallery
+                        </a>
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                           px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                           hover:bg-green-100 hover:text-green-600 font-medium
+                           transition-colors duration-300 ease-in-out"
+                                href="https://book.nightsbridge.com/37265" target="_blank"
+                        >
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                <div class="grid place-items-center bg-gray-100 order-1 md:order-2 max-md:mb-4">
+                    <!-- Carousel -->
+                    <div class="carousel relative overflow-hidden max-w-2xl mx-auto">
+                        <!-- Viewport -->
+                        <div class="h-60 md:h-80 relative">
+                            <!-- Track -->
+                            <div class="carousel-track flex transition-transform duration-500 h-full">
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/economy2.JPG"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Economy 1">
+                                </div>
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/economy3.JPG"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Economy 2">
+                                </div>
+                                <div class="w-full h-full flex-shrink-0 bg-gray-200">
+                                    <img src="src/images/index/economy4.jpg"
+                                         class="w-full h-full object-cover object-center flex-shrink-0" alt="Economy 3">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Prev Button -->
+                        <button
+                                class="prevBtn absolute top-1/2 left-4 -translate-y-1/2 flex items-center justify-center
+                                w-10 h-10 bg-gray-100 border border-green-800 rounded-full shadow cursor-pointer
+                                hover:bg-green-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="w-5 h-5 text-green-800 hover:text-white"
+                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-6-7 6-7" />
+                            </svg>
+                        </button>
+
+                        <!-- Next Button -->
+                        <button
+                                class="nextBtn absolute top-1/2 right-4 -translate-y-1/2 flex items-center justify-center
+                                w-10 h-10 bg-gray-100 border border-green-800 rounded-full shadow cursor-pointer
+                                hover:bg-green-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="w-5 h-5 text-green-800 hover:text-white"
+                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l6 7-6 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="hidden md:flex items-center justify-center gap-4">
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                               px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                               hover:bg-green-100 hover:text-green-600 font-medium
+                               transition-colors duration-300 ease-in-out"
+                                href="gallery.html"
+                        >
+                            View Gallery
+                        </a>
+                        <a
+                                class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
+                           px-4 md:px-8 py-3 mt-4 rounded-md w-auto
+                           hover:bg-green-100 hover:text-green-600 font-medium
+                           transition-colors duration-300 ease-in-out"
+                                href="https://book.nightsbridge.com/37265" target="_blank"
+                        >
+                            Book Now
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="h-10"></div>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 h-140 sm:h-100">
+        <div class="max-w-7xl grid grid-cols-2 md:grid-cols-4 mx-auto items-start justify-between p-6">
+            <!-- Address -->
+            <div class="text-center text-white">
+                <h1 class="text-3xl font-medium underline decoration-2">Address</h1>
+                <div class="flex flex-col items-center">
+                    <p class="font-light text-xl">17 Airdrie Road</p>
+                    <p class="font-light text-xl">Eastlea, Harare</p>
+                    <p class="font-light text-xl">Zimbabwe</p>
+                </div>
+            </div>
+            <!-- Contact -->
+            <div class="text-center text-white">
+                <h1 class="text-3xl font-medium underline decoration-2">Contact</h1>
+                <p class="font-light">stay@mongilodge.com</p>
+                <p class="font-light">Call/Sms/WA +263783106946</p>
+                <p class="font-light">Call +263 71 160 8259</p>
+                <p class="font-light">Landline +263 24 249 6297</p>
+            </div>
+            <!-- Follow -->
+            <div class="text-center text-white">
+                <h1 class="text-3xl font-medium underline decoration-2">Follow</h1>
+                <div class="flex flex-col items-center">
+                    <a
+                            class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                            href="https://www.facebook.com/people/Mongi-Guest-House/61566407660600/?mibextid=LQQJ4d"
+                            target="_blank"
+                    >
+                        Facebook
+                    </a>
+                    <a
+                            class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                            href="https://www.instagram.com/mongilodge?igsh=YXltY3BnMnF3aHh6&utm_source=qr"
+                            target="_blank"
+                    >
+                        Instagram
+                    </a>
+                    <a
+                            class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                            href="https://www.tiktok.com/@mongilodge?_t=ZT-90KreGMDE1W&_r=1"
+                            target="_blank"
+                    >
+                        TikTok
+                    </a>
+                </div>
+
+            </div>
+            <!-- Legal -->
+            <div class="text-center text-white">
+                <h1 class="text-3xl font-medium underline decoration-2">Legal</h1>
+                <a
+                        class="text-xl hover:text-green-500 transition-colors duration-300 ease-in-out"
+                        href="privacy-policy.html"
+                >
+                    Privacy Policy
+                </a>
+            </div>
+        </div>
+        <h1 class="text-center mx-auto max-w-6xl text-6xl text-white mt-10">Mongi Guest House</h1>
+        <p class="text-center mx-auto mt-4 max-w-6xl text-xl text-white">
+            &copy; <span id="year"></span> Mongi Guest House LLC.
+        </p>
+
+    </footer>
+</div>
+</body>
+</html>
