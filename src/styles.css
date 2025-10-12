@@ -21,6 +21,13 @@ header {
     text-shadow: 0 0 10px rgba(167, 139, 250, .5);
 }
 
+.center {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Styling for Contact - Country Codes*/
 #dropdown {
     transition: all 0.2s ease-in-out;

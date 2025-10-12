@@ -1129,15 +1129,16 @@
 
     <!-- Frequently Asked Questions -->
     <section class="max-w-6xl mx-auto px-4 mt-4">
-        <!-- Toggle button -->
-        <button
-                onclick="toggleSection('expandableSectionFAQ', 'arrowIconFAQ')"
-                class="h-20 w-full border border-x-green-50/0 flex items-center justify-between text-green-800
-                px-4 py-2 select-none transform hover:scale-102 transition-transform duration-300"
-        >
+        <div class="center text-4xl text-green-800 mb-6">Frequently Asked Questions</div>
 
+        <!-- FAQ #1 -->
+        <button
+                onclick="toggleSection('expandableSectionFAQ1', 'arrowIconFAQ1', false)"
+                class="h-20 w-full flex items-center justify-left text-green-800 px-4 py-2 select-none"
+        >
+            <span class="text-xl pl-2">Do you have Wi-Fi available?</span>
             <!-- Arrow icon -->
-            <svg id="arrowIconFAQ" class="w-5 h-5 transform transition-transform duration-300"
+            <svg id="arrowIconFAQ1" class="w-5 h-5 transform transition-transform duration-300 ml-4"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M19 9l-7 7-7-7" />
@@ -1145,23 +1146,170 @@
         </button>
 
         <!-- Collapsible content -->
-        <div id="expandableSectionFAQ"
-             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0
-                  border-green-800 border-t-green-800/0">
-                <div class="text-xl text-green-800">
-                    <ul class="pl-8 list-disc space-y-1 font-medium mb-8">
-                        <li>Do you have Wi-Fi? <span class="font-normal ml-2">Yes! Unlimited high-speed fiber Wi-Fi throughout.</span></li>
-                        <li>Power cuts? <span class="font-normal ml-2">We have backup solar + generator and reliable hot water.</span></li>
-                        <li>Airport pickup? <span class="font-normal ml-2">Yes! Tick in the form or WhatsApp us your flight details.</span></li>
-                        <li>Which room is most spacious? <span class="font-normal ml-2">The Junior Suite with Balcony (super-king, private balcony, spa-style bath).</span></li>
-                        <li>Family option? <span class="font-normal ml-2">Deluxe Family Room (two ¾ beds convertible to super-king).</span></li>
-                        <li>Meals? <span class="font-normal ml-2">Breakfast 24/7; Lunch/Dinner 11:00 - 22:00; Snacks 24/7.</span></li>
-                    </ul>
-
+        <div id="expandableSectionFAQ1"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0 border-b border-green-800">
+                <div class="text-lg text-green-800 pl-4 list-disc space-y-1 mb-8">
+                    <p class="ml-2">
+                        Absolutely! We offer unlimited high-speed fiber Wi-Fi throughout the entire property — perfect
+                        for work, streaming, or staying connected.
+                    </p>
                 </div>
-
         </div>
+
+        <!-- FAQ #2 -->
+        <button
+                onclick="toggleSection('expandableSectionFAQ2', 'arrowIconFAQ2', false)"
+                class="h-20 w-full flex items-center justify-left text-green-800 px-4 py-2 select-none"
+        >
+            <span class="text-xl pl-2">What happens during power cuts?</span>
+            <!-- Arrow icon -->
+            <svg id="arrowIconFAQ2" class="w-5 h-5 transform transition-transform duration-300 ml-4"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Collapsible content -->
+        <div id="expandableSectionFAQ2"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0 border-b border-green-800">
+            <div class="text-lg text-green-800 pl-4 list-disc space-y-1 mb-8">
+                <p class="ml-2">
+                    No worries! The guest house is fully equipped with backup solar power and a generator, ensuring
+                    continuous electricity and hot water at all times.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ #3 -->
+        <button
+                onclick="toggleSection('expandableSectionFAQ3', 'arrowIconFAQ3', false)"
+                class="h-20 w-full flex items-center justify-left text-green-800 px-4 py-2 select-none"
+        >
+            <span class="text-xl pl-2">Do you offer airport pickup?</span>
+            <!-- Arrow icon -->
+            <svg id="arrowIconFAQ3" class="w-5 h-5 transform transition-transform duration-300 ml-4"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Collapsible content -->
+        <div id="expandableSectionFAQ3"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0 border-b border-green-800">
+            <div class="text-lg text-green-800 pl-4 list-disc space-y-1 mb-8">
+                <p class="ml-2">
+                    Yes! We provide airport transfers for your convenience. Simply tick the option on the booking form
+                    or WhatsApp us your flight details, and we’ll handle the rest.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ #4 -->
+        <button
+                onclick="toggleSection('expandableSectionFAQ4', 'arrowIconFAQ4', false)"
+                class="h-20 w-full flex items-center justify-left text-green-800 px-4 py-2 select-none"
+        >
+            <span class="text-xl pl-2">Which room is the most spacious?</span>
+            <!-- Arrow icon -->
+            <svg id="arrowIconFAQ4" class="w-5 h-5 transform transition-transform duration-300 ml-4"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Collapsible content -->
+        <div id="expandableSectionFAQ4"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0 border-b border-green-800">
+            <div class="text-lg text-green-800 pl-4 list-disc space-y-1 mb-8">
+                <p class="ml-2">
+                    Our Junior Suite with Balcony is the most spacious — featuring a super-king bed, private balcony,
+                    and a spa-style bath for ultimate relaxation.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ #5 -->
+        <button
+                onclick="toggleSection('expandableSectionFAQ5', 'arrowIconFAQ5', false)"
+                class="h-20 w-full flex items-center justify-left text-green-800 px-4 py-2 select-none"
+        >
+            <span class="text-xl pl-2">Do you have family rooms?</span>
+            <!-- Arrow icon -->
+            <svg id="arrowIconFAQ5" class="w-5 h-5 transform transition-transform duration-300 ml-4"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Collapsible content -->
+        <div id="expandableSectionFAQ5"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0 border-b border-green-800">
+            <div class="text-lg text-green-800 pl-4 list-disc space-y-1 mb-8">
+                <p class="ml-2">
+                    Yes — our Deluxe Family Room is ideal for families or small groups. It includes two ¾ beds that can
+                    convert into a super-king bed for added flexibility.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ #6 -->
+        <button
+                onclick="toggleSection('expandableSectionFAQ6', 'arrowIconFAQ6', false)"
+                class="h-20 w-full flex items-center justify-left text-green-800 px-4 py-2 select-none"
+        >
+            <span class="text-xl pl-2">Are meals available?</span>
+            <!-- Arrow icon -->
+            <svg id="arrowIconFAQ6" class="w-5 h-5 transform transition-transform duration-300 ml-4"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Collapsible content -->
+        <div id="expandableSectionFAQ6"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0 border-b border-green-800">
+            <div class="text-lg text-green-800 pl-4 list-disc space-y-1 mb-8 ml-2">
+                Absolutely!
+                <ul class="pl-8 list-disc space-y-1">
+                    <li>Breakfast: Available 24/7</li>
+                    <li>Lunch & Dinner: 11:00 AM – 10:00 PM</li>
+                    <li>Snacks: Available anytime</li>
+                </ul>
+                We also cater to special dietary requests — just let us know in advance.
+            </div>
+        </div>
+
+        <!-- FAQ #7 -->
+        <button
+                onclick="toggleSection('expandableSectionFAQ7', 'arrowIconFAQ7', false)"
+                class="h-20 w-full flex items-center justify-left text-green-800 px-4 py-2 select-none"
+        >
+            <span class="text-xl pl-2">Still have questions?</span>
+            <!-- Arrow icon -->
+            <svg id="arrowIconFAQ7" class="w-5 h-5 transform transition-transform duration-300 ml-4"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Collapsible content -->
+        <div id="expandableSectionFAQ7"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0 border-b border-green-800">
+            <div class="text-lg text-green-800 pl-4 list-disc space-y-1 mb-8 ml-2">
+                Message us on WhatsApp <span class="font-semibold">+263 78 310 6946</span> or email
+                <a href="mailto:stay@mongilodge.com" class="font-semibold">stay@mongilodge.com</a>
+                — we’ll be happy to help!
+            </div>
+        </div>
+
     </section>
+
     <div class="h-10"></div>
 
     <!-- Footer -->

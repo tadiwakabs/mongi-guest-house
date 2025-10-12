@@ -33,7 +33,7 @@ function handleAmenitiesClick() {
 }
 
 // Collapsible sections
-function toggleSection(sectionId, arrowId) {
+function toggleSection(sectionId, arrowId, withBorder=true) {
     const section = document.getElementById(sectionId);
     const arrow = document.getElementById(arrowId);
 
@@ -41,14 +41,14 @@ function toggleSection(sectionId, arrowId) {
     if (section.classList.contains('max-h-0')) {
         section.classList.remove('max-h-0');
         section.classList.add('max-h-500');
-        section.classList.add('border');       // add border when open
+        if (withBorder) section.classList.add("border");      // add border when open
         arrow.classList.add('rotate-180');
     }
     // If currently expanded
     else {
         section.classList.remove('max-h-500');
         section.classList.add('max-h-0');
-        section.classList.remove('border');    // remove border when closed
+        if (withBorder) section.classList.remove("border");    // remove border when closed
         arrow.classList.remove('rotate-180');
     }
 }
