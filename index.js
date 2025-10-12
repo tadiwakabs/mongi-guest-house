@@ -14,26 +14,41 @@ function toggleMenu() {
 
 menuBtn.addEventListener("click", toggleMenu);
 
-// Amenities section navigation
-function navigateToAmenities() {
-    if (window.location.pathname === '/' || window.location.pathname.includes('index.html')) {
-        // If already on index page, just scroll to amenities
-        document.getElementById('amenities').scrollIntoView({behavior: 'smooth'});
+// Rooms section navigation
+function navigateToRoom(roomId) {
+    if (window.location.pathname.includes("rooms.html")) {
+        const section = document.getElementById(roomId);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
     } else {
-        // If on different page, navigate to index with anchor
-        window.location.href = 'index.html#amenities';
+        window.location.href = `rooms.html#${roomId}`;
     }
 }
 
-function handleAmenitiesClick() {
-    toggleMenu(); // close the menu first
-    setTimeout(() => {
-        navigateToAmenities();
-    }, 300); // delay matches your menu transition duration
+// Gallery section navigation
+function navigateToGallery(galleryId) {
+    if (window.location.pathname.includes("gallery.html")) {
+        const section = document.getElementById(galleryId);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    } else {
+        window.location.href = `gallery.html#${galleryId}`;
+    }
 }
 
+// Optional: if using this inside a mobile menu
+function handleRoomClick(roomId) {
+    toggleMenu(); // Close mobile menu first
+    setTimeout(() => {
+        navigateToRoom(roomId);
+    }, 300); // Delay matches menu close animation
+}
+
+
 // Collapsible sections
-function toggleSection(sectionId, arrowId) {
+function toggleSection(sectionId, arrowId, withBorder=true) {
     const section = document.getElementById(sectionId);
     const arrow = document.getElementById(arrowId);
 
@@ -41,14 +56,14 @@ function toggleSection(sectionId, arrowId) {
     if (section.classList.contains('max-h-0')) {
         section.classList.remove('max-h-0');
         section.classList.add('max-h-500');
-        section.classList.add('border');       // add border when open
+        if (withBorder) section.classList.add("border");      // add border when open
         arrow.classList.add('rotate-180');
     }
     // If currently expanded
     else {
         section.classList.remove('max-h-500');
         section.classList.add('max-h-0');
-        section.classList.remove('border');    // remove border when closed
+        if (withBorder) section.classList.remove("border");    // remove border when closed
         arrow.classList.remove('rotate-180');
     }
 }
