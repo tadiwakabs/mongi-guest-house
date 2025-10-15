@@ -218,6 +218,9 @@
   .pointer-events-none {
     pointer-events: none;
   }
+  .visible {
+    visibility: visible;
+  }
   .absolute {
     position: absolute;
   }
@@ -493,12 +496,6 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
-  .animate-spin {
-    animation: var(--animate-spin);
-  }
-  .cursor-not-allowed {
-    cursor: not-allowed;
-  }
   .cursor-pointer {
     cursor: pointer;
   }
@@ -706,6 +703,9 @@
       background-color: color-mix(in oklab, var(--color-black) 60%, transparent);
     }
   }
+  .bg-gray-50 {
+    background-color: var(--color-gray-50);
+  }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
   }
@@ -900,15 +900,6 @@
   .opacity-0 {
     opacity: 0%;
   }
-  .opacity-25 {
-    opacity: 25%;
-  }
-  .opacity-70 {
-    opacity: 70%;
-  }
-  .opacity-75 {
-    opacity: 75%;
-  }
   .opacity-100 {
     opacity: 100%;
   }
@@ -968,13 +959,6 @@
   .select-none {
     -webkit-user-select: none;
     user-select: none;
-  }
-  .group-hover\:text-green-800 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        color: var(--color-green-800);
-      }
-    }
   }
   .group-hover\:opacity-70 {
     &:is(:where(.group):hover *) {
@@ -1380,9 +1364,6 @@ header {
 #countryList {
   scrollbar-width: thin;
   scrollbar-color: #166534 #f3f4f6;
-}
-#thankYouPopup, #errorPopup {
-  transition: opacity 0.3s ease;
 }
 @property --tw-translate-x {
   syntax: "*";
