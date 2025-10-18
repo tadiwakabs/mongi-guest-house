@@ -96,7 +96,7 @@
                    px-8 py-3 mt-4 rounded-md w-full sm:w-auto
                    hover:bg-green-100 hover:text-green-600 font-medium
                    transition-colors duration-300 ease-in-out"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfbVNWUG7nBrhRsbbp62Xye6ZcHILTf7pDP9iICgPpRSJ6p4g/viewform"
+            href="https://forms.office.com/r/ZYx3WGJbfb"
             target="_blank"
         >
             Registration Form
@@ -622,7 +622,7 @@
 
     <div class="grid grid-cols-3 gap-4 mx-auto px-4 max-w-6xl mt-8">
         <div class="aspect-[4/3] overflow-hidden">
-            <img src="src/images/index/bottom1.JPG" class="w-full h-full object-cover" alt="Dining Area" />
+            <img src="src/images/index/gallery/Dinning%20w%20Food.JPG" class="w-full h-full object-cover" alt="Dining Area" />
         </div>
         <div class="aspect-[4/3] overflow-hidden">
             <img src="src/images/index/bottom2.JPG" class="w-full h-full object-cover" alt="Outside View" />
@@ -806,10 +806,10 @@
 
         <!-- FAQ #7 -->
         <button
-            onclick="toggleSection('expandableSectionFAQ7', 'arrowIconFAQ7', false)"
-            class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none"
+                onclick="toggleSection('expandableSectionFAQ7', 'arrowIconFAQ7', false)"
+                class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none"
         >
-            <span class="text-xl pl-2">Still have questions?</span>
+            <span class="text-xl pl-2">Do you have parking?</span>
             <!-- Arrow icon -->
             <svg id="arrowIconFAQ7" class="w-5 h-5 transform transition-transform duration-300 ml-4"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -821,8 +821,57 @@
         <!-- Collapsible content -->
         <div id="expandableSectionFAQ7"
              class="transition-all duration-500 ease-in-out overflow-hidden max-h-0 border-b border-green-800">
+            <div class="text-lg text-green-800 pl-4 list-disc space-y-1 mb-8">
+                <p class="ml-2">
+                    Yes, <span class="font-medium">free self-parking</span> is available on-site for all guests.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ #8 -->
+        <button
+                onclick="toggleSection('expandableSectionFAQ8', 'arrowIconFAQ8', false)"
+                class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none"
+        >
+            <span class="text-xl pl-2">Is the place secure?</span>
+            <!-- Arrow icon -->
+            <svg id="arrowIconFAQ8" class="w-5 h-5 transform transition-transform duration-300 ml-4"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Collapsible content -->
+        <div id="expandableSectionFAQ8"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0 border-b border-green-800">
+            <div class="text-lg text-green-800 pl-4 list-disc space-y-1 mb-8">
+                <p class="ml-2">
+                    Yes, the property is <span class="font-medium">fully fenced</span> and equipped with
+                    <span class="font-medium">limited-access electric gates</span> for your safety and privacy.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ End (Still have Q's?) -->
+        <button
+            onclick="toggleSection('expandableSectionFAQEnd', 'arrowIconFAQEnd', false)"
+            class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none"
+        >
+            <span class="text-xl pl-2">Still have questions?</span>
+            <!-- Arrow icon -->
+            <svg id="arrowIconFAQEnd" class="w-5 h-5 transform transition-transform duration-300 ml-4"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Collapsible content -->
+        <div id="expandableSectionFAQEnd"
+             class="transition-all duration-500 ease-in-out overflow-hidden max-h-0 border-b border-green-800">
             <div class="text-lg text-green-800 pl-4 list-disc space-y-1 mb-8 ml-2">
-                Message us on WhatsApp <span class="font-semibold">+263 78 310 6946</span> or email
+                Message us on WhatsApp <span class="font-semibold">+263 78 310 6946 / +263 78 187 4399</span> or email
                 <a href="mailto:stay@mongilodge.com" class="font-semibold">stay@mongilodge.com</a>
                 — we’ll be happy to help!
             </div>

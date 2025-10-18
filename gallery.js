@@ -88,12 +88,11 @@ const galleries = {
         "src/images/index/gallery/bev_snacks.PNG",
     ],
     common: [
-        "src/images/index/gallery/common1.JPG",
-        "src/images/index/gallery/common2.jpeg",
+        "src/images/index/gallery/common1.JPEG",
+        "src/images/index/gallery/common2.PNG",
         "src/images/index/gallery/common3.jpeg",
         "src/images/index/gallery/common4.JPG",
         "src/images/index/gallery/common5.JPG",
-        "src/images/index/gallery/common6.jpeg",
     ],
     exterior: [
         "src/images/index/gallery/exterior1.JPG",
@@ -113,11 +112,14 @@ const galleries = {
         "src/images/index/gallery/exterior15.JPG",
         "src/images/index/gallery/exterior16.JPG",
         "src/images/index/gallery/exterior17.JPG",
-        "src/images/index/gallery/exterior18.JPG",
-        "src/images/index/gallery/exterior19.jpeg",
+        "src/images/index/gallery/exterior18.JPEG",
+        "src/images/index/gallery/exterior19.JPG",
         "src/images/index/gallery/exterior20.JPG",
-        "src/images/index/gallery/exterior21.jpeg",
-        "src/images/index/gallery/exterior22.jpeg",
+        "src/images/index/gallery/exterior21.JPG",
+        "src/images/index/gallery/exterior22.JPG",
+        "src/images/index/gallery/exterior23.JPG",
+        "src/images/index/gallery/exterior24.JPG",
+        "src/images/index/gallery/exterior25.JPG",
     ],
 };
 

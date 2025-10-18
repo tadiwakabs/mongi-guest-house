@@ -105,7 +105,7 @@
 
     <div id="junior-g" class="h-16"></div>
     <!-- Rooms-Junior -->
-    <section class="max-w-6xl mx-auto px-4 py-0.5 mt-4">
+    <section class="max-w-6xl mx-auto px-4 py-0.5">
         <!-- Toggle button -->
         <button
                 onclick="toggleSection('expandableSectionJunior', 'arrowIconJunior')"
@@ -128,17 +128,17 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto p-4 max-w-6xl">
                 <img
                     src="src/images/index/junior1.jpg" alt="Junior 1"
-                    class="w-full h-full object-cover"
+                    class="w-full h-full object-cover cursor-pointer"
                     onclick="openLightbox('junior', 0)"
                 />
                 <img
                         src="src/images/index/junior2.jpg" alt="Junior 2"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('junior', 1)"
                 />
                 <img
                         src="src/images/index/junior3.jpg" alt="Junior 3"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('junior', 2)"
                 />
             </div>
@@ -191,17 +191,17 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto p-4 max-w-6xl">
                 <img
                         src="src/images/index/family1.jpg" alt="Family 1"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('family', 0)"
                 />
                 <img
                         src="src/images/index/family6.jpg" alt="Family 2"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('family', 3)"
                 />
                 <img
                         src="src/images/index/family7.jpg" alt="Family 3"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('family', 4)"
                 />
             </div>
@@ -254,17 +254,17 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto p-4 max-w-6xl">
                 <img
                         src="src/images/index/queen1.jpg" alt="Queen 1"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('queen', 0)"
                 />
                 <img
                         src="src/images/index/queen4.jpg" alt="Queen 2"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('queen', 3)"
                 />
                 <img
                         src="src/images/index/queen3.png" alt="Queen 3"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('queen', 2)"
                 />
             </div>
@@ -317,17 +317,17 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto p-4 max-w-6xl">
                 <img
                         src="src/images/index/superior1.jpg" alt="Superior 1"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('superior', 0)"
                 />
                 <img
                         src="src/images/index/superior2.jpg" alt="Superior 2"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('superior', 1)"
                 />
                 <img
                         src="src/images/index/superior3.jpg" alt="Superior 3"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('superior', 2)"
                 />
             </div>
@@ -380,17 +380,17 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto p-4 max-w-6xl">
                 <img
                         src="src/images/index/standard1.jpeg" alt="Standard 1"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('standard', 0)"
                 />
                 <img
                         src="src/images/index/standard2.jpeg" alt="Standard 2"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('standard', 1)"
                 />
                 <img
                         src="src/images/index/standard3.jpeg" alt="Standard 3"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('standard', 2)"
                 />
             </div>
@@ -441,21 +441,27 @@
              class="transition-all duration-500 ease-in-out overflow-hidden max-h-500
                   border-l border-r border-b border-green-800">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto p-4 max-w-6xl">
-                <img
-                        src="src/images/index/economy2.JPG" alt="Economy 1"
-                        class="w-full h-auto object-cover"
-                        onclick="openLightbox('economy', 0)"
-                />
-                <img
-                        src="src/images/index/economy3new.jpg" alt="Economy 2"
-                        class="w-full h-auto object-cover"
-                        onclick="openLightbox('economy', 1)"
-                />
-                <img
-                        src="src/images/index/economy4new.jpg" alt="Economy 3"
-                        class="w-full h-auto object-cover"
-                        onclick="openLightbox('economy', 2)"
-                />
+                <div class="aspect-[4/3]">
+                    <img
+                            src="src/images/index/economy2.JPG" alt="Economy 1"
+                            class="w-full h-full object-cover cursor-pointer"
+                            onclick="openLightbox('economy', 0)"
+                    />
+                </div>
+                <div class="aspect-[4/3]">
+                    <img
+                            src="src/images/index/economy3.JPG" alt="Economy 2"
+                            class="w-full h-full object-cover cursor-pointer"
+                            onclick="openLightbox('economy', 1)"
+                    />
+                </div>
+                <div class="aspect-[4/3]">
+                    <img
+                            src="src/images/index/economy4.jpg" alt="Economy 3"
+                            class="w-full h-full object-cover cursor-pointer"
+                            onclick="openLightbox('economy', 2)"
+                    />
+                </div>
             </div>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4 px-4">
                 <a
@@ -485,7 +491,7 @@
 
 <!-- Lodge Gallery -->
 <div class="px-4 max-w-6xl mx-auto mt-24">
-    <h1 class="text-4xl font-medium text-green-800 px-4 flex justify-center">Lodge</h1>
+    <h1 class="text-4xl font-medium text-green-800 px-4 flex justify-center mb-8">Lodge</h1>
 
     <!-- Lodge-Dining -->
     <section class="max-w-6xl mx-auto px-4 py-0.5 mt-4">
@@ -509,21 +515,27 @@
              class="transition-all duration-500 ease-in-out overflow-hidden max-h-500
                   border-l border-r border-b border-green-800">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto p-4 max-w-6xl">
+                <div class="aspect-[4/3]">
                 <img
                         src="src/images/index/gallery/Dinning%20w%20Food.JPG" alt="Dining 1"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('dining', 0)"
                 />
+                </div>
+                <div class="aspect-[4/3]">
                 <img
                         src="src/images/index/gallery/breakfast1.jpg" alt="Dining 2"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('dining', 1)"
                 />
+                </div>
+                <div class="aspect-[4/3]">
                 <img
                         src="src/images/index/gallery/Sadza%20Dinner_Lunch.jpg" alt="Dining 3"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('dining', 6)"
                 />
+                </div>
             </div>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4 px-4">
                 <a
@@ -571,22 +583,32 @@
              class="transition-all duration-500 ease-in-out overflow-hidden max-h-500
                   border-l border-r border-b border-green-800">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto p-4 max-w-6xl">
-                <img
-                        src="src/images/index/gallery/common1new.jpg" alt="Common 1"
-                        class="w-full h-full object-cover"
-                        onclick="openLightbox('common', 0)"
-                />
-                <img
-                        src="src/images/index/gallery/common2new.jpg" alt="Common 2"
-                        class="w-full h-full object-cover"
-                        onclick="openLightbox('common', 1)"
-                />
-                <img
-                        src="src/images/index/gallery/common3new.jpg" alt="Common 3"
-                        class="w-full h-full object-cover"
-                        onclick="openLightbox('common', 2)"
-                />
+                <div class="aspect-[4/3]">
+                    <img
+                            src="src/images/index/gallery/common1.JPEG"
+                            alt="Common 1"
+                            class="w-full h-full object-cover cursor-pointer"
+                            onclick="openLightbox('common', 0)"
+                    />
+                </div>
+                <div class="aspect-[4/3]">
+                    <img
+                            src="src/images/index/gallery/common2.PNG"
+                            alt="Common 2"
+                            class="w-full h-full object-cover cursor-pointer"
+                            onclick="openLightbox('common', 1)"
+                    />
+                </div>
+                <div class="aspect-[4/3]">
+                    <img
+                            src="src/images/index/gallery/common3.jpeg"
+                            alt="Common 3"
+                            class="w-full h-full object-cover cursor-pointer"
+                            onclick="openLightbox('common', 2)"
+                    />
+                </div>
             </div>
+
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4 px-4">
                 <a
                         class="flex items-center justify-center text-white text-lg sm:text-2xl bg-green-800
@@ -635,17 +657,17 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto p-4 max-w-6xl">
                 <img
                         src="src/images/index/gallery/exterior1.JPG" alt="Exterior 1"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('exterior', 0)"
                 />
                 <img
                         src="src/images/index/gallery/exterior2.JPG" alt="Exterior 2"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('exterior', 1)"
                 />
                 <img
                         src="src/images/index/gallery/exterior3.JPG" alt="Exterior 3"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover cursor-pointer"
                         onclick="openLightbox('exterior', 2)"
                 />
             </div>
