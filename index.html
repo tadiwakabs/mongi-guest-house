@@ -141,12 +141,31 @@
 
     <!-- Description -->
     <div class="grid grid-cols-1 sm:grid-cols-2 max-w-6xl mx-auto px-4 mt-8 gap-6">
-        <p class="text-xl md:text-2xl text-green-800">
-            Welcome to Mongi Guest House, where modern comfort meets timeless tranquility. Nestled in the vibrant heart
-            of Harare, our boutique guest house offers a serene escape from the city’s pace while keeping you close to
-            its best attractions. Enjoy thoughtfully designed rooms, elegant amenities, and the warmth of authentic
-            Zimbabwean hospitality - all crafted to make your stay both relaxing and memorable.
-        </p>
+        <div class="flex flex-col gap-2">
+            <p class="text-lg md:text-xl text-green-800">
+                Welcome to Mongi Guest House, where modern comfort meets timeless tranquility. Nestled in the vibrant heart
+                of Harare, our boutique guest house offers a serene escape from the city’s pace while keeping you close to
+                its best attractions. Enjoy thoughtfully designed rooms, elegant amenities, and the warmth of authentic
+                Zimbabwean hospitality - all crafted to make your stay both relaxing and memorable.
+            </p>
+            <!-- Shuttle Card -->
+            <div class="card w-auto h-34 md:h-44 mx-4 md:mx-12 flex flex-wrap justify-center items-center gap-2
+            md:gap-4 px-2 md:px-6 py-4"
+            >
+                <p class="font-medium text-green-800 text-sm sm:text-lg text-center">We offer convenient airport and local transportation
+                    to and from the guest house for a small additional fee. </p>
+                <a href="#shuttle"
+                   class="flex items-center justify-center text-white text-sm sm:text-lg bg-green-800
+           px-4 sm:px-6 py-2 rounded-md
+           hover:bg-green-100 hover:text-green-600 font-medium
+           transition-colors duration-300 ease-in-out"
+                   target="_blank"
+                >
+                    More Details
+                </a>
+            </div>
+        </div>
+
         <img src="src/images/index/escape-image.jpg" class="w-full object-cover" alt="Example Suite 2" />
     </div>
 
@@ -160,7 +179,7 @@
     <!-- Amenities Description -->
     <div
         class="flex items-center justify-center px-4 max-w-6xl mx-auto mb-4">
-        <p class="text-xl md:text-2xl text-green-800 text-center">
+        <p class="text-lg md:text-xl text-green-800 text-center">
             At Mongi Guest House, every stay is designed for comfort, style, and convenience. Choose from a range of
             beautifully appointed ensuite rooms to suit your needs: from cozy <span class="font-medium">Economy</span>
             and <span class="font-medium">Standard</span> rooms to spacious <span class="font-medium">Superior</span>,
@@ -310,7 +329,7 @@
     <!-- Amenities Closure -->
     <div class="flex flex-col space-y-4 items-center justify-center text-center px-4 max-w-6xl mx-auto mt-4">
         <h2 class="text-2xl md:text-3xl text-green-900 font-medium">Your Comfort is Our Priority</h2>
-        <p class="text-xl md:text-2xl text-green-900">
+        <p class="text-lg md:text-xl text-green-900">
             Whether you’re visiting Harare for business or leisure, Mongi Guest House offers a calm, secure, and
             welcoming atmosphere combining <span class="font-medium">modern conveniences</span>,
             <span class="font-medium">exceptional service</span>, and the warmth of <span class="font-medium">Zimbabwean
@@ -516,9 +535,56 @@
         </a>
     </div>
 
+    <!-- Shuttle Service -->
+    <div id="shuttle" class="md:h-10"></div>
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 mt-12">
+        <h2 class="text-3xl sm:text-4xl font-medium text-green-900 text-center mb-4">
+            Shuttle Service
+        </h2>
+        <p class="text-center text-green-800 text-lg sm:text-xl mb-8">
+            Enjoy convenient airport and local transportation to and from Mongi Guest House.
+            Our friendly drivers ensure a comfortable ride for a small additional fee.
+        </p>
+
+        <!-- Image Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="relative overflow-hidden rounded-2xl shadow-md">
+                <img
+                        src="/src/images/index/shuttle1.JPEG"
+                        alt="Airport shuttle vehicle"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                />
+                <div class="absolute bottom-0 left-0 right-0 bg-green-900/70 text-white text-center py-2 text-sm font-medium">
+                    Airport Pick-up & Drop-off
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-2xl shadow-md">
+                <img
+                        src="/src/images/index/shuttle2.JPEG"
+                        alt="Airport shuttle vehicle 2"
+                        class="w-full h-64 object-cover object-[center_40%] hover:scale-105 transition-transform duration-300"
+                />
+                <div class="absolute bottom-0 left-0 right-0 bg-green-900/70 text-white text-center py-2 text-sm font-medium">
+                    Local Transportation
+                </div>
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="text-center mt-10">
+            <a
+                    href="contact.html"
+                    class="inline-flex items-center justify-center bg-green-800 text-white px-6 py-3 rounded-md font-semibold text-base sm:text-lg
+        hover:bg-green-100 hover:text-green-700 transition-colors duration-300"
+            >
+                Book Shuttle Service
+            </a>
+        </div>
+    </div>
 
     <!-- Location -->
-    <div class="flex items-center justify-center text-green-800 font-semibold mt-12 text-4xl">Convenient Location</div>
+    <div class="flex items-center justify-center text-green-800 font-semibold mt-16 text-4xl">Convenient Location</div>
     <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 p-6 max-w-6xl mx-auto gap-4">
         <!-- Location-Description -->
         <div class="flex items-center justify-center gap-4 text-green-800 md:text-xl text-center order-2 md:order-1">
@@ -594,7 +660,7 @@
 
     <!-- Front Page Images (Bottom) -->
     <div class="flex items-center justify-center mt-12 p-4 max-w-6xl mx-auto gap-3">
-        <span class="text-green-800 text-xl md:text-2xl md:font-medium">Follow Us on our socials:</span>
+        <span class="text-green-800 text-lg md:text-xl md:font-medium">Follow Us on our socials:</span>
         <!-- Facebook -->
         <a href="https://www.facebook.com/people/Mongi-Guest-House/61566407660600/?mibextid=LQQJ4d"
            target="_blank"
