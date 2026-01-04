@@ -786,18 +786,6 @@
   .object-cover {
     object-fit: cover;
   }
-  .object-\[10\%_40\%\] {
-    object-position: 10% 40%;
-  }
-  .object-\[30\%_40\%\] {
-    object-position: 30% 40%;
-  }
-  .object-\[40\%_40\%\] {
-    object-position: 40% 40%;
-  }
-  .object-\[center_20\%\] {
-    object-position: center 20%;
-  }
   .object-\[center_40\%\] {
     object-position: center 40%;
   }
@@ -1311,11 +1299,6 @@
       height: calc(var(--spacing) * 10);
     }
   }
-  .md\:h-12 {
-    @media (width >= 48rem) {
-      height: calc(var(--spacing) * 12);
-    }
-  }
   .md\:h-20 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 20);
@@ -1326,11 +1309,6 @@
       height: calc(var(--spacing) * 32);
     }
   }
-  .md\:h-36 {
-    @media (width >= 48rem) {
-      height: calc(var(--spacing) * 36);
-    }
-  }
   .md\:h-44 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 44);
@@ -1339,11 +1317,6 @@
   .md\:h-80 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 80);
-    }
-  }
-  .md\:w-43 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 43);
     }
   }
   .md\:grid-cols-2 {
