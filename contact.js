@@ -1,33 +1,64 @@
-// Form Submission Confirmation Popup Functionality
-
+// Form Submission to Appwrite Function
 const form = document.getElementById("contactForm");
 const popup = document.getElementById("thankYouPopup");
+
+// Appwrite SMTP configuration
+const APPWRITE_ENDPOINT = "https://api.tadzz.net/v1";
+const APPWRITE_PROJECT_ID = "69580e1400157f0934ec";
+const FUNCTION_ID = "6961b93000122572dc18";
 
 form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const formData = new FormData(form);
+    const data = Object.fromEntries(formData);
+
+    // Add the current page URL to the form data
+    data._origin = window.location.href;
 
     try {
-        await fetch(form.action, {
-            method: form.method,
-            body: formData,
-            headers: {'Accept': 'application/json'}
+        // Direct API call without authentication
+        const response = await fetch(`${APPWRITE_ENDPOINT}/functions/${FUNCTION_ID}/executions`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Appwrite-Project': APPWRITE_PROJECT_ID,
+            },
+            body: JSON.stringify({
+                body: JSON.stringify(data),
+                async: false
+            })
         });
 
-        form.reset();
-        popup.classList.add("flex");
-        openPopup();
-    }   catch (error) {
+        const execution = await response.json();
+
+        // Parse the function response
+        let result;
+        try {
+            result = JSON.parse(execution.responseBody);
+        } catch (e) {
+            console.error('Parse error:', e, execution);
+            result = { success: false, message: 'Invalid response from server' };
+        }
+
+        if (response.ok && result.success) {
+            form.reset();
+            popup.classList.add("flex");
+            openPopup();
+        } else {
+            alert(result.message || "Oops! Something went wrong, please try again.");
+        }
+    } catch (error) {
+        console.error('Form submission error:', error);
         alert("Oops! Something went wrong, please try again.");
     }
 });
 
 function openPopup() {
     const popup = document.getElementById("thankYouPopup");
-    popup.classList.remove("hidden");        // make it visible
+    popup.classList.remove("hidden");
     requestAnimationFrame(() => {
-        popup.classList.remove("opacity-0");   // fade in
+        popup.classList.remove("opacity-0");
         popup.classList.add("opacity-100");
     });
 }
@@ -35,13 +66,11 @@ function openPopup() {
 function closePopup() {
     const popup = document.getElementById("thankYouPopup");
     popup.classList.remove("opacity-100");
-    popup.classList.add("opacity-0");        // fade out
-    // wait for fade before hiding completely
+    popup.classList.add("opacity-0");
     setTimeout(() => popup.classList.add("hidden"), 300);
 }
 
-
-// Pulling country codes for phone # input
+// Country codes for phone # input
 document.addEventListener("DOMContentLoaded", () => {
     const countrySelector = document.getElementById("countrySelector");
     const dropdown = document.getElementById("dropdown");
@@ -51,17 +80,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedFlag = document.getElementById("selectedFlag");
     const selectedCode = document.getElementById("selectedCode");
 
-    document.getElementById("countryCode").value = "+263";
+    document.getElementById("countryCode").value = "+1";
 
-    // Fetch and load countries.json
     fetch("./src/data/countries.json")
         .then(res => res.json())
         .then(countries => {
-            // Render the dropdown list
-            // Replace your renderList() with this:
             function renderList() {
                 const q = (searchInput.value || "").trim().toLowerCase();
-                const qDigits = q.replace(/\D/g, ""); // numeric-only for dial search
+                const qDigits = q.replace(/\D/g, "");
 
                 countryList.innerHTML = "";
 
@@ -70,10 +96,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         const name = (c.name || "").toLowerCase();
                         const dialDigits = (c.dial || "").replace(/\D/g, "");
 
-                        const matchesName = q ? name.includes(q) : false;          // only check if q has letters
-                        const matchesDial = qDigits ? dialDigits.includes(qDigits) : false; // only check if digits exist
+                        const matchesName = q ? name.includes(q) : false;
+                        const matchesDial = qDigits ? dialDigits.includes(qDigits) : false;
 
-                        // If query empty → show all; else require either name or dial match
                         return q ? (matchesName || matchesDial) : true;
                     })
                     .forEach((c) => {
@@ -104,11 +129,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             searchInput.addEventListener("input", renderList);
-
-            // Initial render
             renderList();
 
-            // Show/hide dropdown on click
             countrySelector.addEventListener("click", () => {
                 dropdown.classList.toggle("hidden");
                 if (!dropdown.classList.contains("hidden")) {
@@ -116,7 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
 
-            // Close dropdown when clicking outside
             document.addEventListener("click", e => {
                 if (!countrySelector.contains(e.target) && !dropdown.contains(e.target)) {
                     dropdown.classList.add("hidden");

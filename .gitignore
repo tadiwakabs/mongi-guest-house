@@ -2,3 +2,4 @@
 /node_modules/
 functions/.env
 functions/contact-form-handler.tar.gz
+.env
