@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedFlag = document.getElementById("selectedFlag");
     const selectedCode = document.getElementById("selectedCode");
 
-    document.getElementById("countryCode").value = "+1";
+    document.getElementById("countryCode").value = "+263";
 
     fetch("./src/data/countries.json")
         .then(res => res.json())
