@@ -1,0 +1,9 @@
+{
+  "name": "contact-form-handler",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "node-appwrite": "^21.1.0",
+    "nodemailer": "^7.0.12"
+  }
+}

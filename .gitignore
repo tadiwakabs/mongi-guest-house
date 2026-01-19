@@ -3,3 +3,4 @@
 functions/.env
 functions/contact-form-handler.tar.gz
 .env
+*.env
