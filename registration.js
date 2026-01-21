@@ -1,3 +1,20 @@
+// Button State Management
+const submitBtn = document.getElementById("submitBtn");
+const submitText = document.getElementById("submitText");
+const submitSpinner = document.getElementById("submitSpinner");
+
+function setSubmitting(isSubmitting) {
+    submitBtn.disabled = isSubmitting;
+
+    if (isSubmitting) {
+        submitSpinner.classList.remove("hidden");
+        submitText.textContent = "Submitting...";
+    } else {
+        submitSpinner.classList.add("hidden");
+        submitText.textContent = "Submit";
+    }
+}
+
 // How did you hear about us? Other:
 document.addEventListener("DOMContentLoaded", () => {
     const heardFrom = document.getElementById("heardFrom");
@@ -43,6 +60,7 @@ const FUNCTION_ID = "696d726c003d4fc184e4";
 
 form.addEventListener("submit", async function (e) {
     e.preventDefault();
+    setSubmitting(true);
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
@@ -68,8 +86,7 @@ form.addEventListener("submit", async function (e) {
         let result;
         try {
             result = JSON.parse(execution.responseBody);
-        } catch (err) {
-            console.error("Parse error:", err, execution);
+        } catch {
             result = { success: false, message: "Invalid response from server" };
         }
 
@@ -87,6 +104,8 @@ form.addEventListener("submit", async function (e) {
     } catch (error) {
         console.error("Form submission error:", error);
         alert("Oops! Something went wrong, please try again.");
+    } finally {
+        setSubmitting(false);
     }
 });
 

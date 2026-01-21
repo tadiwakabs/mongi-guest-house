@@ -1,3 +1,20 @@
+// Button State Management
+const submitBtn = document.getElementById("submitBtn");
+const submitText = document.getElementById("submitText");
+const submitSpinner = document.getElementById("submitSpinner");
+
+function setSubmitting(isSubmitting) {
+    submitBtn.disabled = isSubmitting;
+
+    if (isSubmitting) {
+        submitSpinner.classList.remove("hidden");
+        submitText.textContent = "Submitting...";
+    } else {
+        submitSpinner.classList.add("hidden");
+        submitText.textContent = "Submit";
+    }
+}
+
 // Form Submission to Appwrite Function
 const form = document.getElementById("contactForm");
 const popup = document.getElementById("thankYouPopup");
@@ -9,6 +26,7 @@ const FUNCTION_ID = "6961b93000122572dc18";
 
 form.addEventListener("submit", async function (e) {
     e.preventDefault();
+    setSubmitting(true);
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
@@ -37,7 +55,6 @@ form.addEventListener("submit", async function (e) {
         try {
             result = JSON.parse(execution.responseBody);
         } catch (e) {
-            console.error('Parse error:', e, execution);
             result = { success: false, message: 'Invalid response from server' };
         }
 
@@ -51,6 +68,8 @@ form.addEventListener("submit", async function (e) {
     } catch (error) {
         console.error('Form submission error:', error);
         alert("Oops! Something went wrong, please try again.");
+    } finally {
+        setSubmitting(false);
     }
 });
 

@@ -266,12 +266,44 @@
                         </div>
 
                         <div class="flex items-center justify-center p-4">
-                            <button type="submit"
-                                    class="border border-black rounded-full bg-green-800 text-white font-medium px-12
-                         py-2 hover:bg-white hover:text-green-800 transition-colors duration-300 ease-in-out
-                         cursor-pointer">
-                                Submit
+                            <button
+                                    type="submit"
+                                    id="submitBtn"
+                                    class="relative flex items-center justify-center gap-2
+                                         border border-black rounded-full
+                                         bg-green-800 text-white font-medium
+                                         px-12 py-2
+                                         hover:bg-white hover:text-gray-800
+                                         transition-colors duration-300 ease-in-out
+                                         disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+                            >
+                                <!-- Spinner -->
+                                <svg
+                                        id="submitSpinner"
+                                        class="hidden h-5 w-5 animate-spin text-white"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                >
+                                    <circle
+                                            class="opacity-25"
+                                            cx="12"
+                                            cy="12"
+                                            r="10"
+                                            stroke="currentColor"
+                                            stroke-width="4"
+                                    />
+                                    <path
+                                            class="opacity-75"
+                                            fill="currentColor"
+                                            d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                                    />
+                                </svg>
+
+                                <!-- Button Text -->
+                                <span id="submitText">Submit</span>
                             </button>
+
                         </div>
 
                     </form>
@@ -291,7 +323,7 @@
             <h2 class="text-2xl font-bold text-green-800">Thank You!</h2>
             <p class="mt-4 text-gray-700 font-medium">Your message has been sent. We will get back to you shortly.</p>
             <button onclick="closeRegPopup()"
-                    class="mt-6 bg-green-800 text-white font-medium px-6 py-2 rounded hover:bg-green-600">
+                    class="mt-6 bg-green-800 text-white font-medium px-6 py-2 rounded hover:bg-green-600 cursor-pointer">
                 Close
             </button>
         </div>
