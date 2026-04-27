@@ -771,9 +771,6 @@
   .bg-gray-300 {
     background-color: var(--color-gray-300);
   }
-  .bg-gray-800 {
-    background-color: var(--color-gray-800);
-  }
   .bg-green-800 {
     background-color: var(--color-green-800);
   }
@@ -1131,13 +1128,6 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-green-700);
-      }
-    }
-  }
-  .hover\:text-green-800 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-green-800);
       }
     }
   }
