@@ -21,67 +21,76 @@
 </script>
 
 <body class="bg-gray-100">
-    <!-- Navbar -->
-    <header class="fixed w-full z-40 bg-white shadow-md">
-        <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
-            <!-- Logo -->
-            <div class="flex items-center space-x-4">
-                <img src="src/logo.png" width="44" alt="logo">
-                <a href="index.html" class="text-2xl font-bold text-green-800">
-                    Mongi Guest House
-                </a>
-            </div>
+<!-- Navbar -->
+<header class="fixed w-full z-40 bg-white shadow-md">
+    <!-- Banner -->
+    <div class="bg-green-800 text-white text-center text-sm sm:text-base font-medium py-2 px-4">
+        <span class="md:hidden text-xl">ATTENTION</span>
+        <p class="md:hidden">Mongi Guest House is currently closed for renovations and is not taking any bookings.</p>
+        <span class="max-md:hidden">
+            ATTENTION: Mongi Guest House is currently closed for renovations and is not taking any bookings.
+        </span>
+    </div>
 
-            <!-- Desktop Nav -->
-            <div class="hidden md:flex space-x-6 text-green-800 font-medium text-sm lg:text-lg">
-                <a href="index.html" class="hover:text-green-600 text-center">Home</a>
-                <a href="rooms.html" class="hover:text-green-600 text-center">Rooms</a>
-                <a href="gallery.html" class="hover:text-green-600 text-center">Gallery</a>
-                <a href="contact.html" class="hover:text-green-600 text-center">Contact</a>
-                <a href="https://book.nightsbridge.com/37265"
-                   class="hover:text-green-600 text-center" target="_blank">Book Now</a>
-                <a href="src/Mongi Menu June 2026.pdf" class="hover:text-green-600 text-center"  target="_blank">
-                    Food Menu
-                </a>
-            </div>
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+        <!-- Logo -->
+        <div class="flex items-center space-x-4">
+            <img src="src/logo.png" width="44" alt="logo">
+            <a href="index.html" class="text-2xl font-bold text-green-800">
+                Mongi Guest House
+            </a>
+        </div>
 
-            <!-- Mobile Menu Button -->
-            <button id="menuBtn" type="button" class="md:hidden p-2 text-green-800 focus:outline-none z-50">
-                <!-- Hamburger Icon -->
-                <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg"
-                     class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex space-x-6 text-green-800 font-medium text-sm lg:text-lg">
+            <a href="index.html" class="hover:text-green-600 text-center">Home</a>
+            <a href="rooms.html" class="hover:text-green-600 text-center">Rooms</a>
+            <a href="gallery.html" class="hover:text-green-600 text-center">Gallery</a>
+            <a href="contact.html" class="hover:text-green-600 text-center">Contact</a>
+            <a href="https://book.nightsbridge.com/37265"
+               class="hover:text-green-600 text-center" target="_blank">Book Now</a>
+            <a href="src/Mongi Menu June 2026.pdf" class="hover:text-green-600 text-center"  target="_blank">
+                Food Menu
+            </a>
+        </div>
 
-                <!-- Close Icon -->
-                <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg"
-                     class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" type="button" class="md:hidden p-2 text-green-800 focus:outline-none z-50">
+            <!-- Hamburger Icon -->
+            <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg"
+                 class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
 
-        </nav>
+            <!-- Close Icon -->
+            <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg"
+                 class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
 
-        <!-- Mobile Nav Overlay -->
-        <div id="mobileMenu"
-             class="fixed inset-0 bg-white bg-opacity-95 backdrop-blur-md z-30 flex flex-col
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div id="mobileMenu"
+         class="fixed inset-0 bg-white bg-opacity-95 backdrop-blur-md z-30 flex flex-col
               items-center justify-center space-y-8 text-2xl font-semibold text-green-800
               opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
-        >
-            <a href="index.html" class="hover:text-green-600" onclick="toggleMenu()">Home</a>
-            <a href="rooms.html" class="hover:text-green-600" onclick="toggleMenu()">Rooms</a>
-            <a href="gallery.html" class="hover:text-green-600" onclick="toggleMenu()">Gallery</a>
-            <a href="contact.html" class="hover:text-green-600" onclick="toggleMenu()">Contact</a>
-            <a href="https://book.nightsbridge.com/37265" target="_blank"
-               class="hover:text-green-600" onclick="toggleMenu()">Book Now</a>
-            <a href="src/Mongi Menu February 2026.pdf" class="hover:text-green-600"  target="_blank" onclick="toggleMenu()">
-                Food Menu</a>
-        </div>
-    </header>
+    >
+        <a href="index.html" class="hover:text-green-600" onclick="toggleMenu()">Home</a>
+        <a href="rooms.html" class="hover:text-green-600" onclick="toggleMenu()">Rooms</a>
+        <a href="gallery.html" class="hover:text-green-600" onclick="toggleMenu()">Gallery</a>
+        <a href="contact.html" class="hover:text-green-600" onclick="toggleMenu()">Contact</a>
+        <a href="https://book.nightsbridge.com/37265" target="_blank"
+           class="hover:text-green-600" onclick="toggleMenu()">Book Now</a>
+        <a href="src/Mongi Menu February 2026.pdf" class="hover:text-green-600"  target="_blank" onclick="toggleMenu()">
+            Food Menu</a>
+    </div>
+</header>
 
-<div class="pt-20">
+<div class="pt-28 sm:pt-24">
     <!-- Title -->
     <div class="flex items-center justify-center h-30 sm:h-40 px-4 max-w-6xl mx-auto">
         <h1 class="text-4xl md:text-7xl font-bold text-green-900">Mongi Guest House</h1>
@@ -95,22 +104,22 @@
     <!-- Registration / Payment Buttons -->
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4 my-6 px-8 sm:px-2">
         <a
-            class="flex items-center justify-center text-white text-xl sm:text-2xl bg-green-800
+                class="flex items-center justify-center text-white text-xl sm:text-2xl bg-green-800
                    px-8 py-3 mt-4 rounded-md w-full sm:w-auto
                    hover:bg-green-100 hover:text-green-600 font-medium
                    transition-colors duration-300 ease-in-out"
-            href="https://www.paypal.com/ncp/payment/FJG7HA4JRAJGQ"
-            target="_blank"
+                href="https://www.paypal.com/ncp/payment/FJG7HA4JRAJGQ"
+                target="_blank"
         >
             Make a Payment
         </a>
         <a
-            class="flex items-center justify-center text-white text-xl sm:text-2xl bg-green-800
+                class="flex items-center justify-center text-white text-xl sm:text-2xl bg-green-800
                    px-8 py-3 mt-4 rounded-md w-full sm:w-auto
                    hover:bg-green-100 hover:text-green-600 font-medium
                    transition-colors duration-300 ease-in-out"
-            href="registration.html"
-            target="_blank"
+                href="registration.html"
+                target="_blank"
         >
             Registration Form
         </a>
@@ -173,13 +182,13 @@
     <!-- Amenities -->
     <div id="amenities" class="md:h-20"></div>
     <div
-         class="flex items-center justify-center h-20 px-4 max-w-6xl mx-auto mt-8">
+            class="flex items-center justify-center h-20 px-4 max-w-6xl mx-auto mt-8">
         <h1 class="text-4xl text-green-800 font-medium"> Amenities </h1>
     </div>
 
     <!-- Amenities Description -->
     <div
-        class="flex items-center justify-center px-4 max-w-6xl mx-auto mb-4">
+            class="flex items-center justify-center px-4 max-w-6xl mx-auto mb-4">
         <p class="text-lg md:text-xl text-gray-800 text-center">
             At Mongi Guest House, every stay is designed for comfort, style, and convenience. Choose from a range of
             beautifully appointed ensuite rooms to suit your needs: from cozy <span class="font-medium">Economy</span>
@@ -212,7 +221,7 @@
                   border-green-800 border-t-green-800/0">
             <div class="grid grid-cols-1 md:grid-cols-2 p-6">
                 <div
-                    class="text-xl text-gray-800 md:order-1 order-2">
+                        class="text-xl text-gray-800 md:order-1 order-2">
                     <p class="mb-6">
                         Every ensuite includes a variety of thoughtful features, such as:
                     </p>
@@ -228,20 +237,20 @@
                         <li>Desk & Chair, Cabinet Drawer, and Nightstand <span class="font-normal italic">(except Standard Ensuites)</span></li>
                     </ul>
                     <a
-                        class="md:hidden max-md:flex items-center justify-center text-white text-2xl bg-green-800 px-12
+                            class="md:hidden max-md:flex items-center justify-center text-white text-2xl bg-green-800 px-12
                                py-3 h-16 w-auto hover:bg-green-100 hover:text-green-600 rounded-md font-medium
                                transition-colors duration-300 ease-in-out mt-auto md:mt-0"
-                        href="https://book.nightsbridge.com/37265" target="_blank"
+                            href="https://book.nightsbridge.com/37265" target="_blank"
                     >
                         Book Now
                     </a>
                 </div>
                 <div
-                    class="md:order-2 order-1 grid place-items-center gap-4 max-md:mb-4">
+                        class="md:order-2 order-1 grid place-items-center gap-4 max-md:mb-4">
                     <img
-                        src="src/images/index/amenity-room.jpg"
-                        class="w-full h-auto max-w-lg object-contain"
-                        alt="Example Suite 2"
+                            src="src/images/index/amenity-room.jpg"
+                            class="w-full h-auto max-w-lg object-contain"
+                            alt="Example Suite 2"
                     />
                     <a
                             class="max-md:hidden text-white text-2xl bg-green-800 px-12 py-3 h-16 w-auto hover:bg-green-100
@@ -366,16 +375,16 @@
                         <td class="px-2 py-3 text-xl text-gray-800">
                             <div class="flex max-md:flex-col items-center gap-3">
                                 <a
-                                    onclick="navigateToRoom('junior')"
-                                    class="text-green-800 text-sm md:text-lg bg-gray-200 px-3 py-2 rounded-md w-auto
+                                        onclick="navigateToRoom('junior')"
+                                        class="text-green-800 text-sm md:text-lg bg-gray-200 px-3 py-2 rounded-md w-auto
                                     hover:bg-green-100 hover:text-green-600 font-medium transition-colors duration-300
                                     ease-in-out whitespace-nowrap cursor-pointer"
                                 >
                                     View Details
                                 </a>
                                 <a
-                                    onclick="navigateToGallery('junior-g')"
-                                    class="text-white text-sm md:text-lg bg-green-800 px-3 py-2 rounded-md w-auto
+                                        onclick="navigateToGallery('junior-g')"
+                                        class="text-white text-sm md:text-lg bg-green-800 px-3 py-2 rounded-md w-auto
                                     hover:bg-green-100 hover:text-green-600 font-medium transition-colors duration-300
                                     ease-in-out whitespace-nowrap cursor-pointer"
                                 >
@@ -393,16 +402,16 @@
                         <td class="px-2 py-3 text-xl text-gray-800">
                             <div class="flex max-md:flex-col items-center gap-3">
                                 <a
-                                    onclick="navigateToRoom('family')"
-                                    class="text-green-800 text-sm md:text-lg bg-gray-200 px-3 py-2 rounded-md w-auto
+                                        onclick="navigateToRoom('family')"
+                                        class="text-green-800 text-sm md:text-lg bg-gray-200 px-3 py-2 rounded-md w-auto
                                     hover:bg-green-100 hover:text-green-600 font-medium transition-colors duration-300
                                     ease-in-out whitespace-nowrap cursor-pointer"
                                 >
                                     View Details
                                 </a>
                                 <a
-                                    onclick="navigateToGallery('family-g')"
-                                    class="text-white text-sm md:text-lg bg-green-800 px-3 py-2 rounded-md w-auto
+                                        onclick="navigateToGallery('family-g')"
+                                        class="text-white text-sm md:text-lg bg-green-800 px-3 py-2 rounded-md w-auto
                                     hover:bg-green-100 hover:text-green-600 font-medium transition-colors duration-300
                                     ease-in-out whitespace-nowrap cursor-pointer"
                                 >
@@ -527,10 +536,10 @@
     <div class="center space-x-2 md:space-x-6 mt-6">
         <p class="text-green-800 font-medium text-md md:text-2xl">Discover Your Perfect Getaway.</p>
         <a
-            class="text-white text-sm md:text-lg bg-green-800 px-3 py-2 rounded-md w-auto
+                class="text-white text-sm md:text-lg bg-green-800 px-3 py-2 rounded-md w-auto
                    hover:bg-green-100 hover:text-green-600 font-medium transition-colors duration-300
                    ease-in-out whitespace-nowrap"
-            href="https://book.nightsbridge.com/37265" target="_blank"
+                href="https://book.nightsbridge.com/37265" target="_blank"
         >
             Book Your Stay
         </a>
@@ -595,7 +604,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                          class="lucide lucide-map-pin-icon lucide-map-pin justify-center">"
-                    >
+                        >
                         <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8
                          8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>
                     </svg>
@@ -634,13 +643,13 @@
         <div class="flex flex-col items-center justify-center gap-2 order-1 md:order-2">
             <div class="transform hover:scale-102 transition-transform duration-300 flex items-center justify-center">
                 <a
-                    href="https://www.google.com/maps/place/Mongi+Guest+House/@-17.8342272,31.0311847,13z/data=!4m9!3m8!1s0x1931bb396a739083:0x48e93fb7e998c39c!5m2!4m1!1i2!8m2!3d-17.8312273!4d31.0954863!16s%2Fg%2F11ltsd091j?entry=ttu&g_ep=EgoyMDI1MDkyMy4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank"
-                    class="relative group block"
+                        href="https://www.google.com/maps/place/Mongi+Guest+House/@-17.8342272,31.0311847,13z/data=!4m9!3m8!1s0x1931bb396a739083:0x48e93fb7e998c39c!5m2!4m1!1i2!8m2!3d-17.8312273!4d31.0954863!16s%2Fg%2F11ltsd091j?entry=ttu&g_ep=EgoyMDI1MDkyMy4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank"
+                        class="relative group block"
                 >
                     <img src="src/location.png" alt="location" class="border border-green-900 w-120">
                     <div
-                        class="absolute inset-0 bg-black flex items-center justify-center opacity-0
+                            class="absolute inset-0 bg-black flex items-center justify-center opacity-0
                         group-hover:opacity-70 transition-opacity duration-300"
                     >
                         <span class="pt-4 text-white text-xl font-semibold opacity-100">Open in Google Maps</span>
@@ -727,8 +736,8 @@
 
         <!-- FAQ #1 -->
         <button
-            onclick="toggleSection('expandableSectionFAQ1', 'arrowIconFAQ1', false)"
-            class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none"
+                onclick="toggleSection('expandableSectionFAQ1', 'arrowIconFAQ1', false)"
+                class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none"
         >
             <span class="text-xl pl-2">Do you have Wi-Fi available?</span>
             <!-- Arrow icon -->
@@ -742,18 +751,18 @@
         <!-- Collapsible content -->
         <div id="expandableSectionFAQ1"
              class="transition-all duration-500 ease-in-out overflow-hidden max-h-0 border-b border-green-800">
-                <div class="text-lg text-gray-800 pl-4 list-disc space-y-1 mb-8">
-                    <p class="ml-2">
-                        Absolutely! We offer unlimited high-speed fiber Wi-Fi throughout the entire property — perfect
-                        for work, streaming, or staying connected.
-                    </p>
-                </div>
+            <div class="text-lg text-gray-800 pl-4 list-disc space-y-1 mb-8">
+                <p class="ml-2">
+                    Absolutely! We offer unlimited high-speed fiber Wi-Fi throughout the entire property — perfect
+                    for work, streaming, or staying connected.
+                </p>
+            </div>
         </div>
 
         <!-- FAQ #2 -->
         <button
-            onclick="toggleSection('expandableSectionFAQ2', 'arrowIconFAQ2', false)"
-            class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none
+                onclick="toggleSection('expandableSectionFAQ2', 'arrowIconFAQ2', false)"
+                class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none
                    text-left"
         >
             <span class="text-xl pl-2">What happens during power cuts?</span>
@@ -778,8 +787,8 @@
 
         <!-- FAQ #3 -->
         <button
-            onclick="toggleSection('expandableSectionFAQ3', 'arrowIconFAQ3', false)"
-            class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none"
+                onclick="toggleSection('expandableSectionFAQ3', 'arrowIconFAQ3', false)"
+                class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none"
         >
             <span class="text-xl pl-2">Do you offer airport pickup?</span>
             <!-- Arrow icon -->
@@ -803,8 +812,8 @@
 
         <!-- FAQ #4 -->
         <button
-            onclick="toggleSection('expandableSectionFAQ4', 'arrowIconFAQ4', false)"
-            class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none
+                onclick="toggleSection('expandableSectionFAQ4', 'arrowIconFAQ4', false)"
+                class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none
             text-left"
         >
             <span class="text-xl pl-2">What are your check-in and check-out times?</span>
@@ -831,8 +840,8 @@
 
         <!-- FAQ #5 -->
         <button
-            onclick="toggleSection('expandableSectionFAQ5', 'arrowIconFAQ5', false)"
-            class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none"
+                onclick="toggleSection('expandableSectionFAQ5', 'arrowIconFAQ5', false)"
+                class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none"
         >
             <span class="text-xl pl-2">Do you have family rooms?</span>
             <!-- Arrow icon -->
@@ -856,8 +865,8 @@
 
         <!-- FAQ #6 -->
         <button
-            onclick="toggleSection('expandableSectionFAQ6', 'arrowIconFAQ6', false)"
-            class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none"
+                onclick="toggleSection('expandableSectionFAQ6', 'arrowIconFAQ6', false)"
+                class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none"
         >
             <span class="text-xl pl-2">Are meals available?</span>
             <!-- Arrow icon -->
@@ -933,8 +942,8 @@
 
         <!-- FAQ End (Still have Q's?) -->
         <button
-            onclick="toggleSection('expandableSectionFAQEnd', 'arrowIconFAQEnd', false)"
-            class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none"
+                onclick="toggleSection('expandableSectionFAQEnd', 'arrowIconFAQEnd', false)"
+                class="h-20 w-full flex items-center justify-between md:justify-left text-green-800 px-4 py-2 select-none"
         >
             <span class="text-xl pl-2">Still have questions?</span>
             <!-- Arrow icon -->
